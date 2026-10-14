@@ -1,0 +1,8 @@
+.okvir {
+    width: 560px;
+    max-width: 100%;
+}
+
+.okvir input, .okvir select {
+    width: 100%;
+}

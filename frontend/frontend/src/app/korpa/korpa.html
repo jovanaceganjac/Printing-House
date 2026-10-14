@@ -1,0 +1,62 @@
+<h2>E-korpa</h2>
+<div class="sidra">
+    <a routerLink="/klijent">Moj Profil</a>
+    <a routerLink="/narudzbine">Moje Narudžbine</a>
+    <a routerLink="/pretraga">Pretraga Proizvoda</a>
+    <a routerLink="/korpa" class="aktivan">E-Korpa</a>
+    <a routerLink="/arhiva">Arhiva Proizvoda</a>
+    @if (tip == "klijent_pravno") {
+        <a routerLink="/javne-nabavke">Javne Nabavke</a>
+    }
+</div>
+
+<div class="okvir" id="e-korpa">
+<h3>E-KORPA</h3>
+@if (grupeKorpe.length == 0) {
+    <p>Korpa je prazna. Pronađite proizvod kroz pretragu.</p>
+}
+@else {
+    @for (g of grupeKorpe; track g.stampar) {
+        <h4>{{g.naziv_stamparije}}</h4>
+        <div class="tabela-okvir">
+<table>
+            <tr>
+                <th>Proizvod</th>
+                <th>Boja</th>
+                <th>Tip štampe</th>
+                <th>Tekst štampe</th>
+                <th>Količina</th>
+                <th>Cena po komadu</th>
+                <th>Ukupno</th>
+                <th></th>
+            </tr>
+            @for (r of g.redovi; track r.indeks) {
+                <tr>
+                    <td>{{r.stavka.naziv}}</td>
+                    <td>{{r.stavka.boja}}</td>
+                    <td>{{r.stavka.tip_stampe != "" ? r.stavka.tip_stampe : "po ponudi"}}</td>
+                    <td>{{r.stavka.tekst_stampe}}</td>
+                    <td class="broj"><input class="kolicina" type="number" min="1" step="1" [name]="'kolicina_korpa_' + r.indeks" [value]="r.stavka.kolicina" (change)="promeniKolicinu(r.indeks, $event)"></td>
+                    <td class="broj">{{r.stavka.cena_po_komadu}} din</td>
+                    <td class="broj">{{r.stavka.ukupno}} din</td>
+                    <td><button class="dugme-opasno" (click)="izbaci(r.indeks)">Izbaci</button></td>
+                </tr>
+            }
+        </table>
+</div>
+        <p>Međuzbir za {{g.naziv_stamparije}}: {{g.zbir}} din</p>
+    }
+
+    <p><b>Ukupno: {{ukupnoKorpa}} din</b></p>
+    @if (tip == "klijent_pravno") {
+        <p>Kao pravno lice, potvrdom se raspisuje javna nabavka i licitacija u trajanju od 10 minuta.</p>
+    }
+    @else {
+        <p>Formiraće se {{grupeKorpe.length}} faktura(e), po jedna za svaku štampariju, i poslati na Vaš e-mail kao PDF.
+        Posle potvrde sledi plaćanje.</p>
+    }
+    <span class="greska">{{porukaKorpa}}</span><br>
+    <button (click)="potvrdi()">POTVRDI</button>
+}
+<span class="uspeh">{{porukaKorpaUspeh}}</span>
+</div>

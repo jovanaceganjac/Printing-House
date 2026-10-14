@@ -1,0 +1,53 @@
+<h2>Priprema proizvoda</h2>
+<hr>
+
+<h3>{{proizvod.naziv}}</h3>
+
+<div class="raspored">
+    <div class="platno">
+        @if (proizvod.slika != "") {
+            <img class="podloga" [src]="api + proizvod.slika" [alt]="proizvod.naziv">
+        }
+        @if (slikaStampe != "") {
+            <img class="preklop-slika" [src]="api + slikaStampe" alt="slika štampe">
+        }
+        @if (tekstStampe != "") {
+            <span class="preklop-tekst">{{tekstStampe}}</span>
+        }
+    </div>
+
+    <div class="forma">
+        Vrsta štampe@if (tip == "klijent_pravno") { (nije obavezna za javnu nabavku)}:
+        <select name="izabranaUsluga" [(ngModel)]="izabranaUsluga">
+            <option value="">-- izaberite --</option>
+            @for (u of proizvod.usluge_stampe; track u.id_usluge) {
+                <option [value]="u.tip_stampe">{{u.tip_stampe}} (+{{u.dodatna_cena_po_komadu}} din)</option>
+            }
+        </select><br>
+        @if (izabranaUslugaPodaci() != null) {
+            <p class="pomocni">Najveća površina za štampu: {{izabranaUslugaPodaci()!.max_sirina_mm}} x {{izabranaUslugaPodaci()!.max_visina_mm}} mm</p>
+        }
+
+        Boja:
+        <select name="izabranaBoja" [(ngModel)]="izabranaBoja">
+            @for (b of boje; track b) {
+                <option [value]="b">{{b}}</option>
+            }
+        </select><br>
+
+        Tekst štampe: <input type="text" class="siroko" name="tekstStampe" [(ngModel)]="tekstStampe"><br>
+        Sličica za štampu (JPG/PNG/GIF): <input #fajlSlicice type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiSlicicu($event)"><br>
+        Količina: <input type="number" class="kolicina" name="kolicina" [(ngModel)]="kolicina"><br>
+
+        <p>Cena po komadu: {{cenaPoKomadu()}} din</p>
+        <p>Ukupno: {{ukupno()}} din</p>
+        <p>Na lageru: {{proizvod.kolicina_na_lageru}}</p>
+
+        <span class="greska">{{porukaGreske}}</span><br>
+        <button (click)="dodajUKorpu()">DODAJ U KORPU</button>
+        <button class="dugme-sporedno" (click)="ponisti(); fajlSlicice.value = ''">PONIŠTI</button>
+        <button class="dugme-sporedno" (click)="nazad()">NAZAD</button>
+    </div>
+</div>
+
+<hr>

@@ -1,0 +1,46 @@
+<h2>Administrator</h2>
+<div class="sidra">
+    <a routerLink="/administrator" class="aktivan">Zahtevi Za Registraciju</a>
+    <a routerLink="/svi-korisnici">Svi Korisnici</a>
+    <a routerLink="/kategorije-proizvoda">Kategorije Proizvoda</a>
+    <a routerLink="/statistike">Statistike</a>
+</div>
+
+<p>Prijavljen korisnik: {{korisnik.ime}} {{korisnik.prezime}} ({{korisnik.kor_ime}})</p>
+
+<div class="okvir" id="zahtevi-za-registraciju">
+<h3>ZAHTEVI ZA REGISTRACIJU</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>Korisničko ime</th>
+        <th>Ime i prezime</th>
+        <th>E-mail</th>
+        <th>Tip</th>
+        <th>Naziv institucije</th>
+        <th>Matični broj</th>
+        <th>PIB</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @if (zahtevi.length == 0) {
+        <tr>
+            <td colspan="9">Nema zahteva na čekanju.</td>
+        </tr>
+    }
+    @for (z of zahtevi; track z.kor_ime) {
+        <tr>
+            <td>{{z.kor_ime}}</td>
+            <td>{{z.ime}} {{z.prezime}}</td>
+            <td>{{z.email}}</td>
+            <td>{{nazivTipa(z.tip)}}</td>
+            <td>{{z.naziv_institucije}}</td>
+            <td>{{z.maticni_broj}}</td>
+            <td>{{z.pib}}</td>
+            <td><button (click)="odobri(z)">Odobri</button></td>
+            <td><button class="dugme-opasno" (click)="odbij(z)">Odbij</button></td>
+        </tr>
+    }
+</table>
+</div>
+</div>

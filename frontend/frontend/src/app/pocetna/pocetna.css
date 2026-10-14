@@ -1,0 +1,87 @@
+:host {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    grid-template-rows: auto auto auto;
+    column-gap: var(--r5);
+    align-items: start;
+}
+
+:host > * {
+    grid-column: 1;
+}
+
+:host > hr {
+    display: none;
+}
+
+.junak {
+    padding: var(--r4) 0 var(--r5) 0;
+}
+
+.junak-red {
+    font-size: 0.875rem;
+    color: var(--tekst-blag);
+    margin: 0;
+}
+
+.junak-broj {
+    display: block;
+    font-family: var(--naslovni);
+    font-weight: 600;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--mastilo);
+    margin-top: var(--r2);
+}
+
+.traka-boja {
+    display: flex;
+    gap: var(--r1);
+    margin-top: var(--r4);
+}
+
+.traka-boja span {
+    width: 64px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.traka-boja span:nth-child(1) { background-color: var(--cijan); }
+.traka-boja span:nth-child(2) { background-color: var(--magenta); }
+.traka-boja span:nth-child(3) { background-color: var(--zuta); }
+.traka-boja span:nth-child(4) { background-color: var(--mastilo); }
+
+.panel-prijave {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: 340px;
+    max-width: 100%;
+    margin-top: var(--r4);
+}
+
+.panel-prijave input {
+    width: 100%;
+}
+
+.panel-prijave a {
+    display: inline-block;
+    color: var(--cijan-tamni);
+    margin-top: var(--r1);
+}
+
+@media (max-width: 900px) {
+    :host {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    :host > * {
+        grid-column: 1;
+    }
+
+    .panel-prijave {
+        grid-column: 1;
+        grid-row: auto;
+        width: 100%;
+    }
+}

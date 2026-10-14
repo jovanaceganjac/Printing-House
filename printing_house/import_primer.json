@@ -1,0 +1,76 @@
+{
+  "stampaorijaId": "stampa_001",
+  "nazivStamparije": "Copy Studio Kumanovska",
+  "proizvodi": [
+    {
+      "sifra": "PR-001",
+      "naziv": "Pamucna Polo Majica",
+      "opis": "Kvalitetna pamučna polo majica 180g/m2, pogodna za brendiranje i korporativne uniforme.",
+      "kategorija": "Kreativne štampe",
+      "potkategorija": "Štampa na majicama",
+      "jedinicnaCena": 1200.00,
+      "kolicinaNaLageru": 150,
+      "dostupneBoje": ["Bela", "Crna", "Tamno plava", "Siva"],
+      "slikaUrl": "",
+      "dodatneSlike": [],
+      "uslugeStampe": [
+        {
+          "idUsluge": "USL-01",
+          "tipStampe": "Direktna štampa na tekstil (DTG)",
+          "dodatnaCenaPoKomadu": 350.00,
+          "maxSirinaMm": 300,
+          "maxVisinaMm": 400
+        },
+        {
+          "idUsluge": "USL-02",
+          "tipStampe": "Preslikač (Sito preslikač)",
+          "dodatnaCenaPoKomadu": 200.00,
+          "maxSirinaMm": 280,
+          "maxVisinaMm": 350
+        }
+      ]
+    },
+    {
+      "sifra": "PR-002",
+      "naziv": "Keramička šolja 330ml",
+      "opis": "Bela keramička šolja visokog sjaja, idealna za sublimacionu štampu visoke rezolucije.",
+      "kategorija": "Kreativne štampe",
+      "potkategorija": "Šolje",
+      "jedinicnaCena": 320.00,
+      "kolicinaNaLageru": 500,
+      "dostupneBoje": ["Bela"],
+      "slikaUrl": "",
+      "dodatneSlike": [],
+      "uslugeStampe": [
+        {
+          "idUsluge": "USL-03",
+          "tipStampe": "Sublimaciona štampa",
+          "dodatnaCenaPoKomadu": 150.00,
+          "maxSirinaMm": 200,
+          "maxVisinaMm": 85
+        }
+      ]
+    },
+    {
+      "sifra": "PR-003",
+      "naziv": "Promotivni Roll-up Baner 85x200cm",
+      "opis": "Lagan aluminijumski mehanizam sa torbom i štampom na kvalitetnom baner platnu.",
+      "kategorija": "Štampa velikih formata",
+      "potkategorija": "Rollups",
+      "jedinicnaCena": 4500.00,
+      "kolicinaNaLageru": 20,
+      "dostupneBoje": ["Bela", "Crna"],
+      "slikaUrl": "",
+      "dodatneSlike": [],
+      "uslugeStampe": [
+        {
+          "idUsluge": "USL-04",
+          "tipStampe": "Eko-solventna štampa visoke rezolucije",
+          "dodatnaCenaPoKomadu": 800.00,
+          "maxSirinaMm": 850,
+          "maxVisinaMm": 2000
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<h2>Administrator</h2>
+<div class="sidra">
+    <a routerLink="/administrator">Zahtevi Za Registraciju</a>
+    <a routerLink="/svi-korisnici">Svi Korisnici</a>
+    <a routerLink="/kategorije-proizvoda" class="aktivan">Kategorije Proizvoda</a>
+    <a routerLink="/statistike">Statistike</a>
+</div>
+
+<div class="okvir" id="kategorije-proizvoda">
+<h3>KATEGORIJE PROIZVODA</h3>
+@for (kat of kategorije; track kat.naziv) {
+    <p><b>{{kat.naziv}}</b><br>
+    Potkategorije: {{kat.potkategorije.join(", ")}}</p>
+}
+
+<div class="okvir">
+    <b>Nova kategorija</b><br>
+    Naziv: <input type="text" name="novaKategorija" [(ngModel)]="novaKategorija">
+    <button (click)="dodajKategoriju()">Dodaj kategoriju</button>
+</div>
+
+<div class="okvir">
+    <b>Nova potkategorija</b><br>
+    Kategorija:
+    <select name="izabranaKategorija" [(ngModel)]="izabranaKategorija">
+        <option value="">-- izaberite --</option>
+        @for (kat of kategorije; track kat.naziv) {
+            <option [value]="kat.naziv">{{kat.naziv}}</option>
+        }
+    </select>
+    Naziv: <input type="text" name="novaPotkategorija" [(ngModel)]="novaPotkategorija">
+    <button (click)="dodajPotkategoriju()">Dodaj potkategoriju</button>
+</div>
+
+<span class="greska">{{porukaKategorije}}</span><br>
+<span class="uspeh">{{porukaKategorijeUspeh}}</span>
+</div>

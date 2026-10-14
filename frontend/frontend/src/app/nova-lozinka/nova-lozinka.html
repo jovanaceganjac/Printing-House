@@ -1,0 +1,12 @@
+<h2>Nova lozinka</h2>
+<hr>
+
+<div class="okvir">
+    Nova lozinka: <input type="password" name="lozinka" [(ngModel)]="lozinka"><br>
+    Potvrda lozinke: <input type="password" name="potvrdaLozinke" [(ngModel)]="potvrdaLozinke"><br>
+    <span class="greska">{{porukaGreske}}</span><br>
+    <span class="uspeh">{{porukaUspeha}}</span><br>
+    <button (click)="postavi()">Postavi novu lozinku</button>
+</div>
+
+<hr>

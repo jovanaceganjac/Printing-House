@@ -1,0 +1,69 @@
+<h2>Javne nabavke</h2>
+<div class="sidra">
+    <a routerLink="/klijent">Moj Profil</a>
+    <a routerLink="/narudzbine">Moje Narudžbine</a>
+    <a routerLink="/pretraga">Pretraga Proizvoda</a>
+    <a routerLink="/korpa">E-Korpa</a>
+    <a routerLink="/arhiva">Arhiva Proizvoda</a>
+    <a routerLink="/javne-nabavke" class="aktivan">Javne Nabavke</a>
+</div>
+
+<div class="okvir" id="javne-nabavke">
+<h3>JAVNE NABAVKE</h3>
+<p class="pomocni">Javna nabavka se raspisuje potvrdom e-korpe. Licitacija traje 10 minuta, a zaključuje se pri sledećoj prijavi ili poseti ovoj strani:
+pobednik je štamparija sa najnižom ukupnom ponudom koja ima dovoljno svakog proizvoda na stanju.</p>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>ID nabavke</th>
+        <th>Raspisana</th>
+        <th>Rok za ponude</th>
+        <th>Traženi proizvodi</th>
+        <th>Status</th>
+        <th>Pristiglih ponuda</th>
+        <th>Pobednik</th>
+        <th>Iznos</th>
+        <th></th>
+    </tr>
+    @if (nabavke.length == 0) {
+        <tr>
+            <td colspan="9" class="prazno">Nema raspisanih javnih nabavki. Dodajte proizvode u e-korpu i potvrdite je.</td>
+        </tr>
+    }
+    @for (n of nabavke; track n.id_nabavke) {
+        <tr>
+            <td class="broj">{{n.id_nabavke}}</td>
+            <td>{{formatVreme(n.datum)}}</td>
+            <td>{{formatVreme(n.istice)}}</td>
+            <td>{{trazeniProizvodi(n)}}</td>
+            <td><span class="oznaka oznaka-{{n.status}}">{{nazivStatusa(n.status)}}</span></td>
+            <td class="broj">{{n.ponude.length}}</td>
+            <td>
+                @if (n.status == "otvorena") {
+                    Licitacija u toku
+                }
+                @else {
+                    @if (n.pobednik == "") {
+                        Nijedna ponuda nije ispunila uslove
+                    }
+                    @else {
+                        {{n.naziv_pobednika}}
+                    }
+                }
+            </td>
+            <td class="broj">
+                @if (n.status == "zakljucena" && n.pobednik != "") {
+                    {{n.iznos_pobednika}} din
+                }
+            </td>
+            <td>
+                @if (n.status == "zakljucena") {
+                    <a [href]="putanjaIzvestaja(n)" target="_blank">IZVEŠTAJ (PDF)</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+</div>
+<button class="dugme-sporedno" (click)="osvezi()">Osveži</button>
+</div>

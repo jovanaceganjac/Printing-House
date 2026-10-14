@@ -1,0 +1,4 @@
+.sidra a.aktivan {
+    color: var(--cijan-tamni);
+    font-weight: 600;
+}

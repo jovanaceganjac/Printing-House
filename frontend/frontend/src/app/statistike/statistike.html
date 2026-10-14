@@ -1,0 +1,53 @@
+<h2>Administrator</h2>
+<div class="sidra">
+    <a routerLink="/administrator">Zahtevi Za Registraciju</a>
+    <a routerLink="/svi-korisnici">Svi Korisnici</a>
+    <a routerLink="/kategorije-proizvoda">Kategorije Proizvoda</a>
+    <a routerLink="/statistike" class="aktivan">Statistike</a>
+</div>
+
+<div class="okvir" id="statistike">
+<h3>STATISTIKE</h3>
+
+<h4>Promet štamparija (poslednja 3 meseca)</h4>
+@if (statPromet.length == 0) {
+    <p>Nema podataka za izabrani period.</p>
+}
+<div class="platno-grafikona" [hidden]="statPromet.length == 0">
+    <canvas id="grafikonPromet"></canvas>
+</div>
+</div>
+
+<div class="okvir" id="najcesce-narucivani-proizvodi-poslednjih-mesec-dana">
+<h4>Najčešće naručivani proizvodi (poslednjih mesec dana)</h4>
+@if (statNaruceni.length == 0) {
+    <p>Nema podataka za izabrani period.</p>
+}
+<div class="platno-grafikona" [hidden]="statNaruceni.length == 0">
+    <canvas id="grafikonNaruceni"></canvas>
+</div>
+</div>
+
+<div class="okvir" id="kretanje-ocene-proizvoda-kroz-vreme">
+<h4>Kretanje ocene proizvoda kroz vreme</h4>
+@if (statOcene.length == 0) {
+    <p>Nema podataka za izabrani period.</p>
+}
+@else {
+    <p class="pomocni">Prosečna ocena (1 = sviđa se, -1 = ne sviđa se) na kraju svakog meseca. Označite proizvode koje želite da vidite na grafikonu.</p>
+    <div class="izbor-proizvoda">
+        @for (p of statOcene; track p.sifra) {
+            <label>
+                <input type="checkbox" [checked]="prikazaniUOcenama[p.sifra]" (change)="promeniPrikazOcene(p.sifra, $event)">
+                {{p.naziv}} ({{p.broj_ocena}})
+            </label>
+        }
+    </div>
+    <button class="dugme-sporedno" (click)="prikaziSveOcene(true)">Prikaži sve</button>
+    <button class="dugme-sporedno" (click)="prikaziSveOcene(false)">Isključi sve</button>
+}
+<div class="platno-grafikona" [hidden]="statOcene.length == 0">
+    <canvas id="grafikonOcene"></canvas>
+</div>
+</div>
+

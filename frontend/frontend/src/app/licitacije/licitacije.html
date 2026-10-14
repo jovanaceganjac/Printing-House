@@ -1,0 +1,70 @@
+<h2>Štampar — {{korisnik.naziv_institucije}}</h2>
+<div class="sidra">
+    <a routerLink="/stampar">Moj Profil</a>
+    <a routerLink="/moji-proizvodi">Moji Proizvodi</a>
+    <a routerLink="/naruceni-proizvodi">Naručeni Proizvodi</a>
+    <a routerLink="/licitacije" class="aktivan">Licitacije</a>
+    <a routerLink="/dodavanje-iz-fajla">Dodavanje Iz Fajla</a>
+    <a routerLink="/novi-proizvod">Novi Proizvod</a>
+</div>
+
+<div class="okvir" id="licitacije">
+<h3>LICITACIJE</h3>
+@if (nabavke.length == 0) {
+    <p>Trenutno nema otvorenih javnih nabavki.</p>
+}
+@for (n of nabavke; track n.id_nabavke) {
+    <div class="okvir">
+        <p><b>Nabavka br. {{n.id_nabavke}}</b> — naručilac: {{n.naziv_institucije}},
+        raspisana: {{formatVreme(n.datum)}}, rok za ponude: {{formatVreme(n.istice)}}</p>
+        <p>Traženi proizvodi: {{trazeniProizvodi(n)}}</p>
+
+        @if (imaPonudu(n)) {
+            <p>Vaša ponuda je poslata. Pobednik se bira posle isteka roka.</p>
+        }
+        @else if (mozePonudu(n) == false) {
+            <p class="pomocni">Nemate proizvod u svakoj traženoj potkategoriji, pa ne možete poslati ponudu za ovu nabavku.</p>
+        }
+        @else {
+            <div class="tabela-okvir">
+<table>
+                <tr>
+                    <th>Traženo</th>
+                    <th>Potkategorija</th>
+                    <th>Količina</th>
+                    <th>Moj proizvod</th>
+                    <th>Cena po komadu</th>
+                </tr>
+                @for (st of n.stavke; track st.sifra) {
+                    <tr [class.crveno]="nemaDovoljno(n, st)">
+                        <td>{{st.naziv}}</td>
+                        <td>{{st.potkategorija}}</td>
+                        <td class="broj">{{st.kolicina}}</td>
+                        <td>
+                            <select [name]="'proizvod_' + n.id_nabavke + '_' + st.sifra" [(ngModel)]="ponudeProizvodi[kljucCene(n, st.sifra)]">
+                                <option value="">-- izaberite --</option>
+                                @for (p of mojiUPotkategoriji(st); track p.sifra) {
+                                    <option [value]="p.sifra">{{p.naziv}} (na lageru: {{p.kolicina_na_lageru}})</option>
+                                }
+                            </select>
+                            @if (nemaDovoljno(n, st)) {
+                                <br><span class="pomocni">Nemate dovoljno na stanju: ponuda ne može pobediti dok ne dopunite lager.</span>
+                            }
+                        </td>
+                        <td>
+                            <input class="kolicina" type="number" min="0"
+                                [name]="'ponuda_' + n.id_nabavke + '_' + st.sifra"
+                                [(ngModel)]="ponudeCene[kljucCene(n, st.sifra)]">
+                        </td>
+                    </tr>
+                }
+            </table>
+</div>
+            <p>Ukupna cena ponude: {{ukupnaPonuda(n)}} din</p>
+            <button (click)="posaljiPonudu(n)">Pošalji ponudu</button>
+        }
+    </div>
+}
+<span class="greska">{{porukaNabavke}}</span>
+<span class="uspeh">{{porukaNabavkeUspeh}}</span>
+</div>

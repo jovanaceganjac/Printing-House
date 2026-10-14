@@ -1,0 +1,85 @@
+<h2>Administrator</h2>
+<div class="sidra">
+    <a routerLink="/administrator">Zahtevi Za Registraciju</a>
+    <a routerLink="/svi-korisnici" class="aktivan">Svi Korisnici</a>
+    <a routerLink="/kategorije-proizvoda">Kategorije Proizvoda</a>
+    <a routerLink="/statistike">Statistike</a>
+</div>
+
+<div class="okvir" id="svi-korisnici">
+<h3>SVI KORISNICI</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>Korisničko ime</th>
+        <th>Ime</th>
+        <th>Prezime</th>
+        <th>Telefon</th>
+        <th>E-mail</th>
+        <th>Tip</th>
+        <th>Status</th>
+        <th>Slika</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @for (k of korisnici; track k.kor_ime) {
+        @if (izmenaKorIme == k.kor_ime) {
+            <tr>
+                <td>{{k.kor_ime}}</td>
+                <td><input class="polje" type="text" [name]="'ime_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.ime"></td>
+                <td><input class="polje" type="text" [name]="'prezime_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.prezime"></td>
+                <td><input class="polje" type="text" [name]="'telefon_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.telefon"></td>
+                <td><input class="polje" type="text" [name]="'email_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.email"></td>
+                <td>{{nazivTipa(k.tip)}}</td>
+                <td><span class="oznaka oznaka-{{k.status}}">{{nazivStatusa(k.status)}}</span></td>
+                <td><input type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiSlikuIzmene($event)" title="Nova profilna slika (100x100 do 250x250)"></td>
+                <td><button (click)="sacuvajIzmenu()">Sačuvaj</button></td>
+                <td><button class="dugme-sporedno" (click)="otkaziIzmenu()">Odustani</button></td>
+            </tr>
+            @if (jeInstitucija(k)) {
+                <tr>
+                    <td>Institucija</td>
+                    <td colspan="4">
+                        Naziv: <input class="polje" type="text" [name]="'naziv_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.naziv_institucije">
+                        Adresa: <input class="polje" type="text" [name]="'adresa_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.adresa_sedista">
+                        Grad: <input class="polje" type="text" [name]="'grad_' + k.kor_ime" [(ngModel)]="izmenaKorisnik.grad">
+                    </td>
+                    <td colspan="5"></td>
+                </tr>
+            }
+        }
+        @else {
+            <tr [class.crveno]="k.status == 'na cekanju'" [class.sivo]="k.status == 'odbijen'">
+                <td>{{k.kor_ime}}</td>
+                <td>{{k.ime}}</td>
+                <td>{{k.prezime}}</td>
+                <td>{{k.telefon}}</td>
+                <td>{{k.email}}</td>
+                <td>{{nazivTipa(k.tip)}}</td>
+                <td><span class="oznaka oznaka-{{k.status}}">{{nazivStatusa(k.status)}}</span></td>
+                <td>
+                    @if (k.slika != "") {
+                        <img class="profilna" [src]="api + k.slika" [alt]="k.kor_ime">
+                    }
+                </td>
+                <td>
+                    <button (click)="pocniIzmenu(k)">Izmeni</button>
+                    @if (k.tip != "admin" && k.status != "odobren") {
+                        <button class="dugme-sporedno" (click)="odobri(k)">Odobri</button>
+                    }
+                    @if (k.tip != "admin" && k.status == "odobren") {
+                        <button class="dugme-sporedno" (click)="odbij(k)">Blokiraj</button>
+                    }
+                </td>
+                <td>
+                    @if (k.tip != "admin") {
+                        <button class="dugme-opasno" (click)="obrisi(k)">Obriši</button>
+                    }
+                </td>
+            </tr>
+        }
+    }
+</table>
+</div>
+<span class="greska">{{porukaKorisnici}}</span>
+</div>

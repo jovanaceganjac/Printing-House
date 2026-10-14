@@ -1,0 +1,13 @@
+.podnozje {
+    background-color: var(--podloga);
+    border-top: 1px solid var(--ivica);
+    color: var(--tekst-blag);
+    font-size: 0.875rem;
+    text-align: center;
+    padding: var(--r4) var(--r3);
+    margin-top: var(--r4);
+}
+
+.podnozje span {
+    display: block;
+}

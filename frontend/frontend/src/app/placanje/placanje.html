@@ -1,0 +1,56 @@
+<h2>Plaćanje</h2>
+<hr>
+
+<h3>FAKTURE ZA PLAĆANJE</h3>
+@if (ucitano && fakture.length == 0 && placeno == false) {
+    <p>Nema faktura koje čekaju plaćanje. Plaćanje je moguće samo za narudžbine u statusu naručeno.</p>
+    <button class="dugme-sporedno" (click)="nazad()">NAZAD</button>
+}
+@else {
+    <div class="tabela-okvir">
+    <table>
+        <tr>
+            <th>ID fakture</th>
+            <th>Štamparija</th>
+            <th>Proizvodi</th>
+            <th>Iznos</th>
+        </tr>
+        @for (f of fakture; track f.id_fakture) {
+            <tr>
+                <td class="broj">{{f.id_fakture}}</td>
+                <td>{{f.naziv_stamparije}}</td>
+                <td>{{numerisaniProizvodi(f)}}</td>
+                <td class="broj">{{f.ukupan_iznos}} din</td>
+            </tr>
+        }
+    </table>
+    </div>
+    <p><b>Za naplatu: {{ukupno}} din</b></p>
+    <p class="pomocni">Fakture su evidentirane u statusu naručeno i poslate na Vaš e-mail kao PDF. Posle uspešnog plaćanja prelaze u status plaćeno.
+    Dok nisu plaćene, narudžbinu možete otkazati u tabeli Moje narudžbine.</p>
+
+    <hr>
+
+    <h3>PODACI O KARTICI</h3>
+    <div class="okvir">
+        Tip kartice:
+        <select name="tip" [(ngModel)]="tip">
+            <option value="Visa">Visa</option>
+            <option value="MasterCard">MasterCard</option>
+        </select><br>
+
+        Broj kartice: <input type="text" name="broj" [(ngModel)]="broj" placeholder="4242 4242 4242 4242"><br>
+        CVC: <input type="text" class="kolicina" name="cvc" [(ngModel)]="cvc" placeholder="123"><br>
+        Datum isteka (MM/GG): <input type="text" class="kolicina" name="datum" [(ngModel)]="datum" placeholder="12/30"><br>
+
+        <p class="pomocni">Stripe test kartice: 4242 4242 4242 4242 (Visa, prolazi), 5555 5555 5555 4444 (MasterCard, prolazi),
+        4000 0000 0000 0002 (odbijena), 4000 0000 0000 9995 (nedovoljno sredstava). CVC i datum u budućnosti su proizvoljni.</p>
+
+        <span class="greska">{{porukaGreske}}</span><br>
+        <span class="uspeh">{{porukaUspeha}}</span><br>
+        <button (click)="plati()" [disabled]="placeno || fakture.length == 0">PLATI</button>
+        <button class="dugme-sporedno" (click)="nazad()">NAZAD</button>
+    </div>
+}
+
+<hr>

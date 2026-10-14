@@ -1,0 +1,26 @@
+.sidra a.aktivan {
+    color: var(--cijan-tamni);
+    font-weight: 600;
+}
+
+.polje {
+    width: 140px;
+}
+
+.okvir .okvir {
+    background-color: var(--podloga);
+    border-color: var(--ivica);
+    padding: var(--r3);
+}
+
+.izbor-proizvoda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--r1) var(--r3);
+    margin-bottom: var(--r2);
+    font-size: 0.875rem;
+}
+
+.izbor-proizvoda label {
+    cursor: pointer;
+}

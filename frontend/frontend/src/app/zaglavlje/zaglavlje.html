@@ -1,0 +1,19 @@
+<div class="zaglavlje-omot">
+    <div class="zaglavlje">
+        <div class="naslov">Printing House</div>
+        @if (prijavljen) {
+            <div class="desno">
+                <span class="korisnik">{{korisnik.ime}} {{korisnik.prezime}} <span class="uloga">{{uloga()}}</span></span>
+                <button class="dugme-zaglavlje" (click)="pocetna()">Početna</button>
+                <button class="dugme-zaglavlje" (click)="odjava()">Odjavi se</button>
+            </div>
+        }
+        @else {
+            <div class="desno">
+                <button class="dugme-zaglavlje" (click)="pocetna()">Početna</button>
+                <button class="dugme-zaglavlje" (click)="registracija()">Registracija</button>
+            </div>
+        }
+    </div>
+    <div class="registarska-traka"><span></span><span></span><span></span><span></span></div>
+</div>

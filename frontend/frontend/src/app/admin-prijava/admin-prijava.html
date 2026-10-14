@@ -1,0 +1,12 @@
+<h2>Printing House</h2>
+<hr>
+
+<div class="okvir">
+    <h3>Prijava administratora</h3>
+    Korisničko ime: <input type="text" name="kor_ime" [(ngModel)]="kor_ime" (keyup.enter)="prijava()"><br>
+    Lozinka: <input type="password" name="lozinka" [(ngModel)]="lozinka" (keyup.enter)="prijava()"><br>
+    <span class="greska">{{porukaGreske}}</span><br>
+    <button (click)="prijava()">Prijavi se</button>
+</div>
+
+<hr>

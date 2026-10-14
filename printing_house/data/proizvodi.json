@@ -1,0 +1,657 @@
+[
+  {
+    "sifra": "p001",
+    "naziv": "Vizit karte mat 350g",
+    "opis": "Dvostrane vizit karte na mat kartonu od 350g, dimenzija 90x50mm, sa zaobljenim ivicama na zahtev.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Vizit karte",
+    "jedinicna_cena": 25,
+    "kolicina_na_lageru": 5000,
+    "dostupne_boje": ["Bela", "Krem", "Crna"],
+    "slika": "/uploads/products/proizvod_p001.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p001_1.jpg",
+      "/uploads/products/proizvod_p001_2.jpg",
+      "/uploads/products/proizvod_p001_3.jpg"
+    ],
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 3, "max_sirina_mm": 90, "max_visina_mm": 50 },
+      { "id_usluge": 2, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 1, "max_sirina_mm": 90, "max_visina_mm": 50 },
+      { "id_usluge": 3, "tip_stampe": "UV stampa", "dodatna_cena_po_komadu": 8, "max_sirina_mm": 90, "max_visina_mm": 50 }
+    ],
+    "broj_svidjanja": 4,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-06-28T10:15:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-14T08:40:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-08-03T16:20:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-09-02T12:05:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandar.petrovic", "datum": "2026-06-28T10:16:00.000Z", "tekst": "Karton je debeo i prijatan na dodir, stampa ostra." },
+      { "id_komentara": 2, "kor_ime": "agencija_lux", "datum": "2026-08-03T16:22:00.000Z", "tekst": "Narucili smo 2000 komada za tim, sve stiglo na vreme." }
+    ]
+  },
+  {
+    "sifra": "p002",
+    "naziv": "Flajer A5 kunstdruk",
+    "opis": "Jednostrani ili dvostrani flajer A5 na sjajnom kunstdruk papiru 135g, idealan za akcije i dogadjaje.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Flajeri",
+    "jedinicna_cena": 18,
+    "kolicina_na_lageru": 3000,
+    "dostupne_boje": ["Bela", "Mat bela"],
+    "slika": "/uploads/products/proizvod_p002.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p002_1.jpg",
+      "/uploads/products/proizvod_p002_2.jpg"
+    ],
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 2, "max_sirina_mm": 148, "max_visina_mm": 210 },
+      { "id_usluge": 2, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 2, "max_sirina_mm": 148, "max_visina_mm": 210 }
+    ],
+    "broj_svidjanja": 2,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-05T09:10:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": -1, "datum": "2026-07-22T18:35:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-08-19T11:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "jovan.ilic", "datum": "2026-07-22T18:37:00.000Z", "tekst": "Boje su malo tamnije nego na ekranu, ali kvalitet papira je dobar." }
+    ]
+  },
+  {
+    "sifra": "p003",
+    "naziv": "Poster B1 sjajni",
+    "opis": "Poster formata B1 (700x1000mm) na sjajnom papiru 170g, za izloge i bilborde manjeg formata.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Posteri",
+    "jedinicna_cena": 450,
+    "kolicina_na_lageru": 120,
+    "dostupne_boje": ["Bela", "Sjajna bela"],
+    "slika": "/uploads/products/proizvod_p003.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p003_1.jpg",
+      "/uploads/products/proizvod_p003_2.jpg",
+      "/uploads/products/proizvod_p003_3.jpg"
+    ],
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 40, "max_sirina_mm": 700, "max_visina_mm": 1000 },
+      { "id_usluge": 2, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 25, "max_sirina_mm": 700, "max_visina_mm": 1000 }
+    ],
+    "broj_svidjanja": 6,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-06-20T14:00:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-06-30T15:30:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-07-11T10:45:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-08-01T09:20:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-08-25T13:10:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-09-08T08:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandra.jovanovic", "datum": "2026-06-30T15:33:00.000Z", "tekst": "Najbolji odnos cene i kvaliteta za poster ovog formata." },
+      { "id_komentara": 2, "kor_ime": "milica.savic", "datum": "2026-08-01T09:25:00.000Z", "tekst": "Stampa je postojana, stajao je dve nedelje na suncu bez bledjenja." },
+      { "id_komentara": 3, "kor_ime": "skola_vuk", "datum": "2026-09-08T08:05:00.000Z", "tekst": "Naruceno za skolsku priredbu, deca odusevljena." }
+    ]
+  },
+  {
+    "sifra": "p004",
+    "naziv": "Polo majica pamucna 180g",
+    "opis": "Kvalitetna pamucna polo majica 180g, pogodna za brendiranje i korporativne uniforme, velicine od S do XXL.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Stampa na majicama",
+    "jedinicna_cena": 890,
+    "kolicina_na_lageru": 240,
+    "dostupne_boje": ["Bela", "Crna", "Teget", "Crvena", "Siva"],
+    "slika": "/uploads/products/proizvod_p004.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p004_1.jpg",
+      "/uploads/products/proizvod_p004_2.jpg",
+      "/uploads/products/proizvod_p004_3.jpg"
+    ],
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Preslikac (sito preslikac)", "dodatna_cena_po_komadu": 120, "max_sirina_mm": 300, "max_visina_mm": 400 },
+      { "id_usluge": 2, "tip_stampe": "Digitalna FLEKS stampa", "dodatna_cena_po_komadu": 90, "max_sirina_mm": 250, "max_visina_mm": 350 },
+      { "id_usluge": 3, "tip_stampe": "Direktna stampa na tekstil (DTG)", "dodatna_cena_po_komadu": 260, "max_sirina_mm": 150, "max_visina_mm": 150 }
+    ],
+    "broj_svidjanja": 5,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-07-02T17:00:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-19T11:25:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-08-06T19:40:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-08-27T10:10:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-09-05T14:50:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "jovan.ilic", "datum": "2026-08-06T19:45:00.000Z", "tekst": "Posle tri pranja stampa se nije ispucala, preporucujem preslikac." },
+      { "id_komentara": 2, "kor_ime": "agencija_lux", "datum": "2026-09-05T14:55:00.000Z", "tekst": "Uzeli smo 40 komada za konferenciju, velicine odgovaraju tabeli." }
+    ]
+  },
+  {
+    "sifra": "p005",
+    "naziv": "Pozivnica A6 dvodelna",
+    "opis": "Dvodelna pozivnica formata A6 na kartonu 300g sa preklopom, za svadbe, priredbe i otvaranja.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Pozivnice",
+    "jedinicna_cena": 210,
+    "kolicina_na_lageru": 400,
+    "dostupne_boje": ["Bela", "Krem"],
+    "slika": "/uploads/products/proizvod_p005.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p005_1.jpg",
+      "/uploads/products/proizvod_p005_2.jpg",
+      "/uploads/products/proizvod_p005_3.jpg"
+    ],
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 20, "max_sirina_mm": 105, "max_visina_mm": 148 },
+      { "id_usluge": 2, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 12, "max_sirina_mm": 105, "max_visina_mm": 148 }
+    ],
+    "broj_svidjanja": 1,
+    "broj_nesvidjanja": 2,
+    "ocene": [
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-06-25T09:00:00.000Z" },
+      { "kor_ime": "aleksandar.petrovic", "vrednost": -1, "datum": "2026-07-30T16:15:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": -1, "datum": "2026-08-18T13:45:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandar.petrovic", "datum": "2026-07-30T16:18:00.000Z", "tekst": "Rez na preklopu nije bio potpuno ravan na par primeraka." }
+    ]
+  },
+  {
+    "sifra": "p006",
+    "naziv": "Roll-up ekonomik 80x200",
+    "opis": "Roll-up stalak 80x200cm sa aluminijumskim mehanizmom i torbom za nosenje, za sajmove i prezentacije.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Rollups",
+    "jedinicna_cena": 3200,
+    "kolicina_na_lageru": 45,
+    "dostupne_boje": ["Bela", "Siva"],
+    "slika": "/uploads/products/proizvod_p006.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p006_1.jpg",
+      "/uploads/products/proizvod_p006_2.jpg",
+      "/uploads/products/proizvod_p006_3.jpg"
+    ],
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 150, "max_sirina_mm": 800, "max_visina_mm": 2000 }
+    ],
+    "broj_svidjanja": 2,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-07-09T10:30:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-08-22T17:20:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "agencija_lux", "datum": "2026-07-09T10:35:00.000Z", "tekst": "Mehanizam se lako sklapa, torba za nosenje je solidna." }
+    ]
+  },
+  {
+    "sifra": "p007",
+    "naziv": "Keramicka solja 330ml",
+    "opis": "Bela keramicka solja visokog sjaja zapremine 330ml, idealna za sublimacionu stampu visoke rezolucije.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Solje",
+    "jedinicna_cena": 640,
+    "kolicina_na_lageru": 300,
+    "dostupne_boje": ["Bela", "Crna", "Plava", "Crvena"],
+    "slika": "/uploads/products/proizvod_p007.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p007_1.jpg",
+      "/uploads/products/proizvod_p007_2.jpg",
+      "/uploads/products/proizvod_p007_3.jpg"
+    ],
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Sublimaciona stampa", "dodatna_cena_po_komadu": 110, "max_sirina_mm": 200, "max_visina_mm": 85 },
+      { "id_usluge": 2, "tip_stampe": "UV stampa", "dodatna_cena_po_komadu": 160, "max_sirina_mm": 200, "max_visina_mm": 85 }
+    ],
+    "broj_svidjanja": 5,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-06-22T08:20:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-16T12:00:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-08-04T15:35:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": -1, "datum": "2026-08-29T18:10:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-09-01T09:45:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-09-11T11:30:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "milica.savic", "datum": "2026-08-29T18:14:00.000Z", "tekst": "Motiv je lepo odstampan ali je rucka malo mala za moj ukus." },
+      { "id_komentara": 2, "kor_ime": "skola_vuk", "datum": "2026-09-11T11:33:00.000Z", "tekst": "Poklon solje za nastavnike, svi zadovoljni." }
+    ]
+  },
+  {
+    "sifra": "p008",
+    "naziv": "Fascikla A4 sa dzepom",
+    "opis": "Prezentaciona fascikla A4 na kartonu 300g sa unutrasnjim dzepom i prorezom za vizit kartu.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Fascikle",
+    "jedinicna_cena": 85,
+    "kolicina_na_lageru": 0,
+    "dostupne_boje": ["Bela", "Krem"],
+    "slika": "/uploads/products/proizvod_p008.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p008_1.jpg",
+      "/uploads/products/proizvod_p008_2.jpg",
+      "/uploads/products/proizvod_p008_3.jpg"
+    ],
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 6, "max_sirina_mm": 210, "max_visina_mm": 297 },
+      { "id_usluge": 2, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 10, "max_sirina_mm": 210, "max_visina_mm": 297 }
+    ],
+    "broj_svidjanja": 0,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "skola_vuk", "vrednost": -1, "datum": "2026-07-27T10:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "skola_vuk", "datum": "2026-07-27T10:04:00.000Z", "tekst": "Dzep je plitak, A4 papiri malo vire iz fascikle." }
+    ]
+  },
+  {
+    "sifra": "p009",
+    "naziv": "Hemijska olovka plasticna",
+    "opis": "Plasticna hemijska olovka sa metalnim klipom i plavim mastilom, najtrazeniji promotivni artikal.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Olovke",
+    "jedinicna_cena": 48,
+    "kolicina_na_lageru": 2500,
+    "dostupne_boje": ["Bela", "Plava", "Crna", "Crvena"],
+    "slika": "/uploads/products/proizvod_p009.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p009_1.jpg",
+      "/uploads/products/proizvod_p009_2.jpg",
+      "/uploads/products/proizvod_p009_3.jpg"
+    ],
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Preslikac (sito preslikac)", "dodatna_cena_po_komadu": 12, "max_sirina_mm": 50, "max_visina_mm": 8 },
+      { "id_usluge": 2, "tip_stampe": "UV stampa", "dodatna_cena_po_komadu": 19, "max_sirina_mm": 50, "max_visina_mm": 8 }
+    ],
+    "broj_svidjanja": 1,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-08-12T09:15:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "agencija_lux", "datum": "2026-08-12T09:18:00.000Z", "tekst": "Stampa na olovci je citljiva i ne skida se od drzanja." }
+    ]
+  },
+  {
+    "sifra": "p010",
+    "naziv": "Fototapeta samolepljiva 2x2m",
+    "opis": "Samolepljiva fototapeta dimenzija 2x2m sa mat zastitom, lepi se direktno na ravan zid bez lepka.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Fototapete",
+    "jedinicna_cena": 5400,
+    "kolicina_na_lageru": 18,
+    "dostupne_boje": ["Bela", "Mat bela"],
+    "slika": "/uploads/products/proizvod_p010.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p010_1.jpg",
+      "/uploads/products/proizvod_p010_2.jpg",
+      "/uploads/products/proizvod_p010_3.jpg"
+    ],
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 400, "max_sirina_mm": 2000, "max_visina_mm": 2000 },
+      { "id_usluge": 2, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 650, "max_sirina_mm": 2000, "max_visina_mm": 2000 }
+    ],
+    "broj_svidjanja": 3,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-07-07T13:30:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-07-25T16:00:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": -1, "datum": "2026-08-14T10:20:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-09-03T15:40:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandra.jovanovic", "datum": "2026-08-14T10:24:00.000Z", "tekst": "Spojevi izmedju traka se blago primecuju na svetlim delovima." },
+      { "id_komentara": 2, "kor_ime": "milica.savic", "datum": "2026-09-03T15:44:00.000Z", "tekst": "Lepi se lako, bez mehurica, i posle godinu dana drzi." }
+    ]
+  },
+  {
+    "sifra": "p011",
+    "naziv": "Solja magicna 330ml",
+    "opis": "Crna keramicka solja koja otkriva odstampani motiv kada se napuni toplim napitkom, 330ml.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Solje",
+    "jedinicna_cena": 820,
+    "kolicina_na_lageru": 180,
+    "dostupne_boje": ["Crna", "Bela", "Plava"],
+    "slika": "/uploads/products/proizvod_p011.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p011_1.jpg",
+      "/uploads/products/proizvod_p011_2.jpg",
+      "/uploads/products/proizvod_p011_3.jpg"
+    ],
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Sublimaciona stampa", "dodatna_cena_po_komadu": 180, "max_sirina_mm": 200, "max_visina_mm": 85 },
+      { "id_usluge": 2, "tip_stampe": "UV stampa", "dodatna_cena_po_komadu": 95, "max_sirina_mm": 200, "max_visina_mm": 85 }
+    ],
+    "broj_svidjanja": 4,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-06-26T11:00:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-13T14:25:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": -1, "datum": "2026-08-09T09:50:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-08-31T12:15:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-09-09T17:05:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "jovan.ilic", "datum": "2026-08-09T09:55:00.000Z", "tekst": "Motiv je lep ali se posle masinskog pranja malo izbledeo." },
+      { "id_komentara": 2, "kor_ime": "aleksandar.petrovic", "datum": "2026-06-26T11:05:00.000Z", "tekst": "Efekat otkrivanja motiva radi odlicno, deca odusevljena." }
+    ]
+  },
+  {
+    "sifra": "p012",
+    "naziv": "Promotivni Roll-up baner 85x200",
+    "opis": "Lagan aluminijumski mehanizam sa torbom i stampom na kvalitetnom baner platnu, 85x200cm.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Rollups",
+    "jedinicna_cena": 4300,
+    "kolicina_na_lageru": 25,
+    "dostupne_boje": ["Bela"],
+    "slika": "/uploads/products/proizvod_p012.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p012_1.jpg",
+      "/uploads/products/proizvod_p012_2.jpg",
+      "/uploads/products/proizvod_p012_3.jpg"
+    ],
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 300, "max_sirina_mm": 850, "max_visina_mm": 2000 }
+    ],
+    "broj_svidjanja": 2,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-07-03T10:40:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": -1, "datum": "2026-08-07T13:00:00.000Z" },
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-09-06T16:30:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "skola_vuk", "datum": "2026-08-07T13:04:00.000Z", "tekst": "Mehanizam za uvlacenje se zaglavio posle mesec dana." }
+    ]
+  },
+  {
+    "sifra": "p013",
+    "naziv": "Vizit karte sjajna plastifikacija",
+    "opis": "Vizit karte 90x50mm sa obostranom sjajnom plastifikacijom, karton 300g.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Vizit karte",
+    "jedinicna_cena": 32,
+    "kolicina_na_lageru": 4000,
+    "dostupne_boje": ["Bela", "Sedef"],
+    "slika": "/uploads/products/proizvod_p013.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p013_1.jpg",
+      "/uploads/products/proizvod_p013_2.jpg",
+      "/uploads/products/proizvod_p013_3.jpg"
+    ],
+    "stampar": "stamparija_kragujevac",
+    "grad": "Kragujevac",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 4, "max_sirina_mm": 90, "max_visina_mm": 50 },
+      { "id_usluge": 2, "tip_stampe": "UV stampa", "dodatna_cena_po_komadu": 9, "max_sirina_mm": 90, "max_visina_mm": 50 }
+    ],
+    "broj_svidjanja": 3,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-06-24T08:50:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-07-29T15:10:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-09-04T11:20:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandra.jovanovic", "datum": "2026-06-24T08:55:00.000Z", "tekst": "Plastifikacija je ravnomerna, bez mehurica." }
+    ]
+  },
+  {
+    "sifra": "p014",
+    "naziv": "Duks sa kapuljacom",
+    "opis": "Duks sa kapuljacom i prednjim dzepom, pamuk sa unutrasnjim postavom, gramatura 320g.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Stampa na duksevima",
+    "jedinicna_cena": 2150,
+    "kolicina_na_lageru": 90,
+    "dostupne_boje": ["Crna", "Siva", "Teget", "Bordo"],
+    "slika": "/uploads/products/proizvod_p014.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p014_1.jpg",
+      "/uploads/products/proizvod_p014_2.jpg",
+      "/uploads/products/proizvod_p014_3.jpg"
+    ],
+    "stampar": "stamparija_kragujevac",
+    "grad": "Kragujevac",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Preslikac (sito preslikac)", "dodatna_cena_po_komadu": 180, "max_sirina_mm": 300, "max_visina_mm": 400 },
+      { "id_usluge": 2, "tip_stampe": "Direktna stampa na tekstil (DTG)", "dodatna_cena_po_komadu": 320, "max_sirina_mm": 160, "max_visina_mm": 160 },
+      { "id_usluge": 3, "tip_stampe": "Digitalna FLEKS stampa", "dodatna_cena_po_komadu": 130, "max_sirina_mm": 280, "max_visina_mm": 380 }
+    ],
+    "broj_svidjanja": 3,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-07-18T19:00:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-08-16T12:35:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": -1, "datum": "2026-08-28T14:10:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-09-12T10:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandra.jovanovic", "datum": "2026-08-28T14:15:00.000Z", "tekst": "Skupio se posle prvog pranja na 60 stepeni." },
+      { "id_komentara": 2, "kor_ime": "skola_vuk", "datum": "2026-09-12T10:05:00.000Z", "tekst": "Naruceno za maturante, stampa je precizna." }
+    ]
+  },
+  {
+    "sifra": "p015",
+    "naziv": "Poster A0 foto papir",
+    "opis": "Poster A0 (841x1189mm) na foto papiru 200g, za izlozbe i unutrasnju dekoraciju.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Posteri",
+    "jedinicna_cena": 980,
+    "kolicina_na_lageru": 0,
+    "dostupne_boje": ["Bela", "Sjajna bela"],
+    "slika": "/uploads/products/proizvod_p015.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p015_1.jpg",
+      "/uploads/products/proizvod_p015_2.jpg",
+      "/uploads/products/proizvod_p015_3.jpg"
+    ],
+    "stampar": "stamparija_kragujevac",
+    "grad": "Kragujevac",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 60, "max_sirina_mm": 841, "max_visina_mm": 1189 },
+      { "id_usluge": 2, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 85, "max_sirina_mm": 841, "max_visina_mm": 1189 }
+    ],
+    "broj_svidjanja": 1,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-07-21T09:30:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": -1, "datum": "2026-08-24T18:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "jovan.ilic", "datum": "2026-08-24T18:05:00.000Z", "tekst": "Foto papir se lako guzva pri transportu, trazite tubu." }
+    ]
+  },
+  {
+    "sifra": "p016",
+    "naziv": "Flajer A6 jednostrani",
+    "opis": "Mali flajer A6 na papiru 115g, jednostrana stampa, najjeftinija opcija za velike tiraze.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Flajeri",
+    "jedinicna_cena": 9,
+    "kolicina_na_lageru": 6000,
+    "dostupne_boje": ["Bela"],
+    "slika": "/uploads/products/proizvod_p016.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p016_1.jpg",
+      "/uploads/products/proizvod_p016_2.jpg",
+      "/uploads/products/proizvod_p016_3.jpg"
+    ],
+    "stampar": "stamparija_subotica",
+    "grad": "Subotica",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 1, "max_sirina_mm": 105, "max_visina_mm": 148 },
+      { "id_usluge": 2, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 1, "max_sirina_mm": 105, "max_visina_mm": 148 }
+    ],
+    "broj_svidjanja": 2,
+    "broj_nesvidjanja": 2,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-06-29T10:10:00.000Z" },
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": -1, "datum": "2026-07-24T11:45:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": -1, "datum": "2026-08-11T16:55:00.000Z" },
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-09-07T13:25:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "milica.savic", "datum": "2026-08-11T17:00:00.000Z", "tekst": "Papir je pretanak, providi se sa druge strane." }
+    ]
+  },
+  {
+    "sifra": "p017",
+    "naziv": "Ceger platneni 140g",
+    "opis": "Platneni ceger za kupovinu od pamuka 140g sa dugim rucicama, ekoloska alternativa kesama.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Stampa na cegerima",
+    "jedinicna_cena": 540,
+    "kolicina_na_lageru": 350,
+    "dostupne_boje": ["Bez", "Bela", "Crna"],
+    "slika": "/uploads/products/proizvod_p017.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p017_1.jpg",
+      "/uploads/products/proizvod_p017_2.jpg",
+      "/uploads/products/proizvod_p017_3.jpg"
+    ],
+    "stampar": "stamparija_subotica",
+    "grad": "Subotica",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Preslikac (sito preslikac)", "dodatna_cena_po_komadu": 100, "max_sirina_mm": 300, "max_visina_mm": 300 },
+      { "id_usluge": 2, "tip_stampe": "Digitalna FLEKS stampa", "dodatna_cena_po_komadu": 80, "max_sirina_mm": 280, "max_visina_mm": 280 }
+    ],
+    "broj_svidjanja": 3,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-07-11T15:00:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-08-20T09:40:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-09-10T14:15:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandra.jovanovic", "datum": "2026-07-11T15:05:00.000Z", "tekst": "Rucice su cvrsto zasivene, nosi i teze stvari." }
+    ]
+  },
+  {
+    "sifra": "p018",
+    "naziv": "Fototapeta vinil 4x3m",
+    "opis": "Velika zidna fototapeta 4x3m na vinil podlozi, u trakama sirine 1m, za enterijere i izloge.",
+    "kategorija": "Stampa velikih formata",
+    "potkategorija": "Fototapete",
+    "jedinicna_cena": 7600,
+    "kolicina_na_lageru": 12,
+    "dostupne_boje": ["Bela"],
+    "slika": "/uploads/products/proizvod_p018.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p018_1.jpg",
+      "/uploads/products/proizvod_p018_2.jpg",
+      "/uploads/products/proizvod_p018_3.jpg"
+    ],
+    "stampar": "stamparija_subotica",
+    "grad": "Subotica",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Eko-solventna stampa visoke rezolucije", "dodatna_cena_po_komadu": 900, "max_sirina_mm": 4000, "max_visina_mm": 3000 }
+    ],
+    "broj_svidjanja": 1,
+    "broj_nesvidjanja": 0,
+    "ocene": [
+      { "kor_ime": "agencija_lux", "vrednost": 1, "datum": "2026-08-05T10:00:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "agencija_lux", "datum": "2026-08-05T10:06:00.000Z", "tekst": "Boje su zasicene, izgleda odlicno na celom zidu." }
+    ]
+  },
+  {
+    "sifra": "p019",
+    "naziv": "Zahvalnica A5 sa reljefom",
+    "opis": "Zahvalnica formata A5 na kartonu 250g sa reljefnim zlatnim okvirom, za priredbe i takmicenja.",
+    "kategorija": "Stampa malih formata",
+    "potkategorija": "Zahvalnice",
+    "jedinicna_cena": 110,
+    "kolicina_na_lageru": 500,
+    "dostupne_boje": ["Bela", "Krem"],
+    "slika": "/uploads/products/proizvod_p019.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p019_1.jpg",
+      "/uploads/products/proizvod_p019_2.jpg",
+      "/uploads/products/proizvod_p019_3.jpg"
+    ],
+    "stampar": "stamparija_cacak",
+    "grad": "Cacak",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Digitalna stampa", "dodatna_cena_po_komadu": 15, "max_sirina_mm": 148, "max_visina_mm": 210 },
+      { "id_usluge": 2, "tip_stampe": "Offset stampa", "dodatna_cena_po_komadu": 9, "max_sirina_mm": 148, "max_visina_mm": 210 }
+    ],
+    "broj_svidjanja": 2,
+    "broj_nesvidjanja": 1,
+    "ocene": [
+      { "kor_ime": "aleksandar.petrovic", "vrednost": 1, "datum": "2026-07-01T12:20:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": -1, "datum": "2026-08-13T17:30:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": 1, "datum": "2026-09-13T09:10:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "milica.savic", "datum": "2026-08-13T17:35:00.000Z", "tekst": "Isporuka je kasnila cetiri dana." }
+    ]
+  },
+  {
+    "sifra": "p020",
+    "naziv": "Majica deciji uzrast",
+    "opis": "Deciji model majice od mekog pamuka, uzrasti od 2 do 14 godina, bez stetnih boja.",
+    "kategorija": "Kreativne stampe",
+    "potkategorija": "Stampa na majicama",
+    "jedinicna_cena": 690,
+    "kolicina_na_lageru": 210,
+    "dostupne_boje": ["Bela", "Roze", "Plava", "Zuta"],
+    "slika": "/uploads/products/proizvod_p020.jpg",
+    "dodatne_slike": [
+      "/uploads/products/proizvod_p020_1.jpg",
+      "/uploads/products/proizvod_p020_2.jpg"
+    ],
+    "stampar": "stamparija_cacak",
+    "grad": "Cacak",
+    "usluge_stampe": [
+      { "id_usluge": 1, "tip_stampe": "Preslikac (sito preslikac)", "dodatna_cena_po_komadu": 100, "max_sirina_mm": 220, "max_visina_mm": 300 },
+      { "id_usluge": 2, "tip_stampe": "Digitalna FLEKS stampa", "dodatna_cena_po_komadu": 70, "max_sirina_mm": 200, "max_visina_mm": 280 }
+    ],
+    "broj_svidjanja": 3,
+    "broj_nesvidjanja": 2,
+    "ocene": [
+      { "kor_ime": "aleksandra.jovanovic", "vrednost": 1, "datum": "2026-06-27T16:40:00.000Z" },
+      { "kor_ime": "aleksandar.petrovic", "vrednost": -1, "datum": "2026-07-17T10:05:00.000Z" },
+      { "kor_ime": "milica.savic", "vrednost": 1, "datum": "2026-08-26T13:50:00.000Z" },
+      { "kor_ime": "jovan.ilic", "vrednost": -1, "datum": "2026-09-02T11:15:00.000Z" },
+      { "kor_ime": "skola_vuk", "vrednost": 1, "datum": "2026-09-14T08:30:00.000Z" }
+    ],
+    "komentari": [
+      { "id_komentara": 1, "kor_ime": "aleksandar.petrovic", "datum": "2026-07-17T10:10:00.000Z", "tekst": "Uzrast 6 godina je ispao manji od ocekivanog." },
+      { "id_komentara": 2, "kor_ime": "skola_vuk", "datum": "2026-09-14T08:35:00.000Z", "tekst": "Naruceno za skolski kros, boje su vesele i postojane." }
+    ]
+  }
+]

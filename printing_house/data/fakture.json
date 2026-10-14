@@ -1,0 +1,328 @@
+[
+  {
+    "id_fakture": 1,
+    "klijent": "aleksandar.petrovic",
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "datum": "2026-06-22T09:30:00.000Z",
+    "status": "primljeno",
+    "ukupan_iznos": 34000,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p001",
+        "naziv": "Vizit karte mat 350g",
+        "kolicina": 500,
+        "boja": "Bela",
+        "tip_stampe": "Digitalna stampa",
+        "cena_po_komadu": 28,
+        "ukupno": 14000,
+        "tekst_stampe": "Aleksandar Petrovic, freelance fotograf, 060 1234511",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p002",
+        "naziv": "Flajer A5 kunstdruk",
+        "kolicina": 1000,
+        "boja": "Bela",
+        "tip_stampe": "Offset stampa",
+        "cena_po_komadu": 20,
+        "ukupno": 20000,
+        "tekst_stampe": "Letnja akcija fotografisanja - 20 posto popusta",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 2,
+    "klijent": "agencija_lux",
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "datum": "2026-06-30T11:00:00.000Z",
+    "status": "primljeno",
+    "ukupan_iznos": 37500,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p007",
+        "naziv": "Keramicka solja 330ml",
+        "kolicina": 50,
+        "boja": "Bela",
+        "tip_stampe": "Sublimaciona stampa",
+        "cena_po_komadu": 750,
+        "ukupno": 37500,
+        "tekst_stampe": "Agencija Lux - poslovni pokloni 2026",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 3,
+    "klijent": "aleksandra.jovanovic",
+    "stampar": "stamparija_beograd",
+    "grad": "Beograd",
+    "datum": "2026-07-08T14:20:00.000Z",
+    "status": "isporuceno",
+    "ukupan_iznos": 12475,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p004",
+        "naziv": "Polo majica pamucna 180g",
+        "kolicina": 10,
+        "boja": "Crna",
+        "tip_stampe": "Preslikac (sito preslikac)",
+        "cena_po_komadu": 1010,
+        "ukupno": 10100,
+        "tekst_stampe": "Ekipa sa Kopaonika 2026",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p003",
+        "naziv": "Poster B1 sjajni",
+        "kolicina": 5,
+        "boja": "Bela",
+        "tip_stampe": "Digitalna stampa",
+        "cena_po_komadu": 475,
+        "ukupno": 2375,
+        "tekst_stampe": "Izlozba fotografija - Galerija 12, septembar",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 4,
+    "klijent": "skola_vuk",
+    "stampar": "stamparija_kragujevac",
+    "grad": "Kragujevac",
+    "datum": "2026-07-16T08:45:00.000Z",
+    "status": "isporuceno",
+    "ukupan_iznos": 68950,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p014",
+        "naziv": "Duks sa kapuljacom",
+        "kolicina": 25,
+        "boja": "Teget",
+        "tip_stampe": "Direktna stampa na tekstil (DTG)",
+        "cena_po_komadu": 2470,
+        "ukupno": 61750,
+        "tekst_stampe": "Generacija 2026 - OS Vuk Karadzic",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p013",
+        "naziv": "Vizit karte sjajna plastifikacija",
+        "kolicina": 200,
+        "boja": "Bela",
+        "tip_stampe": "Digitalna stampa",
+        "cena_po_komadu": 36,
+        "ukupno": 7200,
+        "tekst_stampe": "OS Vuk Karadzic - sekretarijat",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 5,
+    "klijent": "jovan.ilic",
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "datum": "2026-07-27T16:10:00.000Z",
+    "status": "primljeno",
+    "ukupan_iznos": 22200,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p011",
+        "naziv": "Solja magicna 330ml",
+        "kolicina": 6,
+        "boja": "Crna",
+        "tip_stampe": "Sublimaciona stampa",
+        "cena_po_komadu": 1000,
+        "ukupno": 6000,
+        "tekst_stampe": "Biciklisticki klub Nisava",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p010",
+        "naziv": "Fototapeta samolepljiva 2x2m",
+        "kolicina": 2,
+        "boja": "Bela",
+        "tip_stampe": "Digitalna stampa",
+        "cena_po_komadu": 5800,
+        "ukupno": 11600,
+        "tekst_stampe": "BK Nisava - zidna fototapeta u klupskim prostorijama",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 3,
+        "sifra": "p012",
+        "naziv": "Promotivni Roll-up baner 85x200",
+        "kolicina": 1,
+        "boja": "Bela",
+        "tip_stampe": "Eko-solventna stampa visoke rezolucije",
+        "cena_po_komadu": 4600,
+        "ukupno": 4600,
+        "tekst_stampe": "Prijave za sezonu 2026/27",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 6,
+    "klijent": "milica.savic",
+    "stampar": "stamparija_subotica",
+    "grad": "Subotica",
+    "datum": "2026-08-05T10:05:00.000Z",
+    "status": "isporuceno",
+    "ukupan_iznos": 19200,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p017",
+        "naziv": "Ceger platneni 140g",
+        "kolicina": 30,
+        "boja": "Bez",
+        "tip_stampe": "Preslikac (sito preslikac)",
+        "cena_po_komadu": 640,
+        "ukupno": 19200,
+        "tekst_stampe": "Radionica keramike - Milica Savic",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 7,
+    "klijent": "agencija_lux",
+    "stampar": "stamparija_subotica",
+    "grad": "Subotica",
+    "datum": "2026-08-19T13:40:00.000Z",
+    "status": "u stampi",
+    "ukupan_iznos": 37000,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p018",
+        "naziv": "Fototapeta vinil 4x3m",
+        "kolicina": 2,
+        "boja": "Bela",
+        "tip_stampe": "Eko-solventna stampa visoke rezolucije",
+        "cena_po_komadu": 8500,
+        "ukupno": 17000,
+        "tekst_stampe": "Prodaja stanova - Agencija Lux",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p016",
+        "naziv": "Flajer A6 jednostrani",
+        "kolicina": 2000,
+        "boja": "Bela",
+        "tip_stampe": "Offset stampa",
+        "cena_po_komadu": 10,
+        "ukupno": 20000,
+        "tekst_stampe": "Besplatna procena nekretnine",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 8,
+    "klijent": "aleksandar.petrovic",
+    "stampar": "stamparija_nis",
+    "grad": "Nis",
+    "datum": "2026-08-28T09:15:00.000Z",
+    "status": "u stampi",
+    "ukupan_iznos": 18000,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p009",
+        "naziv": "Hemijska olovka plasticna",
+        "kolicina": 300,
+        "boja": "Plava",
+        "tip_stampe": "Preslikac (sito preslikac)",
+        "cena_po_komadu": 60,
+        "ukupno": 18000,
+        "tekst_stampe": "Aleksandar Petrovic foto - 060 1234511",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 9,
+    "klijent": "aleksandra.jovanovic",
+    "stampar": "stamparija_cacak",
+    "grad": "Cacak",
+    "datum": "2026-09-06T17:25:00.000Z",
+    "status": "naruceno",
+    "ukupan_iznos": 21980,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p020",
+        "naziv": "Majica deciji uzrast",
+        "kolicina": 12,
+        "boja": "Roze",
+        "tip_stampe": "Preslikac (sito preslikac)",
+        "cena_po_komadu": 790,
+        "ukupno": 9480,
+        "tekst_stampe": "Rodjendan - Mina puni 7 godina",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p019",
+        "naziv": "Zahvalnica A5 sa reljefom",
+        "kolicina": 100,
+        "boja": "Krem",
+        "tip_stampe": "Digitalna stampa",
+        "cena_po_komadu": 125,
+        "ukupno": 12500,
+        "tekst_stampe": "Hvala na ucescu - radionica rucnih radova 2026",
+        "slika_stampe": ""
+      }
+    ]
+  },
+  {
+    "id_fakture": 10,
+    "klijent": "jovan.ilic",
+    "stampar": "stamparija_novisad",
+    "grad": "Novi Sad",
+    "datum": "2026-09-12T08:00:00.000Z",
+    "status": "placeno",
+    "ukupan_iznos": 23370,
+    "stavke": [
+      {
+        "id_stavke": 1,
+        "sifra": "p005",
+        "naziv": "Pozivnica A6 dvodelna",
+        "kolicina": 60,
+        "boja": "Krem",
+        "tip_stampe": "Offset stampa",
+        "cena_po_komadu": 222,
+        "ukupno": 13320,
+        "tekst_stampe": "Pozivnica za skolsku priredbu, 20. septembar 2026",
+        "slika_stampe": ""
+      },
+      {
+        "id_stavke": 2,
+        "sifra": "p006",
+        "naziv": "Roll-up ekonomik 80x200",
+        "kolicina": 3,
+        "boja": "Bela",
+        "tip_stampe": "Eko-solventna stampa visoke rezolucije",
+        "cena_po_komadu": 3350,
+        "ukupno": 10050,
+        "tekst_stampe": "Dobrodosli prvaci - skolska 2026/27",
+        "slika_stampe": ""
+      }
+    ]
+  }
+]

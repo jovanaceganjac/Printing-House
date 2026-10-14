@@ -1,0 +1,89 @@
+<h2>Moje narudžbine</h2>
+<div class="sidra">
+    <a routerLink="/klijent">Moj Profil</a>
+    <a routerLink="/narudzbine" class="aktivan">Moje Narudžbine</a>
+    <a routerLink="/pretraga">Pretraga Proizvoda</a>
+    <a routerLink="/korpa">E-Korpa</a>
+    <a routerLink="/arhiva">Arhiva Proizvoda</a>
+    @if (tip == "klijent_pravno") {
+        <a routerLink="/javne-nabavke">Javne Nabavke</a>
+    }
+</div>
+
+<div class="okvir" id="moje-narudzbine">
+<h3>MOJE NARUDŽBINE</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th class="sortiranje" (click)="sortiraj('id')">
+            ID fakture
+            @if (sortiranoPo == "id") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortiraj('datum')">
+            Datum
+            @if (sortiranoPo == "datum") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortiraj('stamparija')">
+            Štamparija
+            @if (sortiranoPo == "stamparija") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortiraj('grad')">
+            Grad
+            @if (sortiranoPo == "grad") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th>Proizvodi</th>
+        <th class="sortiranje" (click)="sortiraj('iznos')">
+            Ukupan iznos
+            @if (sortiranoPo == "iznos") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortiraj('status')">
+            Status
+            @if (sortiranoPo == "status") {
+                @if (rastuce) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th></th>
+        <th>Faktura</th>
+    </tr>
+    @if (fakture.length == 0) {
+        <tr>
+            <td colspan="9" class="prazno">Nemate narudžbina. Pronađite proizvod kroz pretragu.</td>
+        </tr>
+    }
+    @for (f of fakture; track f.id_fakture) {
+        <tr>
+            <td class="broj">{{f.id_fakture}}</td>
+            <td>{{formatDatum(f.datum)}}</td>
+            <td>{{f.naziv_stamparije}}</td>
+            <td>{{f.grad}}</td>
+            <td>{{numerisaniProizvodi(f)}}</td>
+            <td class="broj">{{f.ukupan_iznos}} din</td>
+            <td><span class="oznaka oznaka-{{f.status}}">{{nazivStatusa(f.status)}}</span></td>
+            <td>
+                @if (f.status == "naruceno") {
+                    @if (tip == "klijent_fizicko") {
+                        <button (click)="plati(f)">Plati</button>
+                    }
+                    <button class="dugme-opasno" (click)="otkazi(f)">Otkaži</button>
+                }
+                @if (f.status == "isporuceno") {
+                    <button (click)="primljeno(f)">Primljeno</button>
+                }
+            </td>
+            <td><a [href]="putanjaPdf(f)" target="_blank">PDF</a></td>
+        </tr>
+    }
+</table>
+</div>
+<span class="greska">{{porukaFakture}}</span>
+</div>

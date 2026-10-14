@@ -1,0 +1,45 @@
+<h2>Štampar — {{korisnik.naziv_institucije}}</h2>
+<div class="sidra">
+    <a routerLink="/stampar">Moj Profil</a>
+    <a routerLink="/moji-proizvodi">Moji Proizvodi</a>
+    <a routerLink="/naruceni-proizvodi" class="aktivan">Naručeni Proizvodi</a>
+    <a routerLink="/licitacije">Licitacije</a>
+    <a routerLink="/dodavanje-iz-fajla">Dodavanje Iz Fajla</a>
+    <a routerLink="/novi-proizvod">Novi Proizvod</a>
+</div>
+
+<div class="okvir" id="naruceni-proizvodi">
+<h3>NARUČENI PROIZVODI</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>ID fakture</th>
+        <th>Klijent</th>
+        <th>Datum</th>
+        <th>Proizvodi</th>
+        <th>Ukupan iznos</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+    @for (f of fakture; track f.id_fakture) {
+        <tr [class.crveno]="f.status == 'naruceno' || f.status == 'placeno'">
+            <td class="broj">{{f.id_fakture}}</td>
+            <td>{{f.klijent}}</td>
+            <td>{{formatDatum(f.datum)}}</td>
+            <td>{{numerisaniProizvodi(f)}}</td>
+            <td class="broj">{{f.ukupan_iznos}} din</td>
+            <td><span class="oznaka oznaka-{{f.status}}">{{nazivStatusa(f.status)}}</span></td>
+            <td>
+                @if (sledeciStatus(f) != "") {
+                    <button (click)="pomeriStatus(f)">{{nazivDugmeta(f)}}</button>
+                }
+                @if (f.status == "naruceno") {
+                    <span class="pomocni">čeka plaćanje klijenta</span>
+                }
+            </td>
+        </tr>
+    }
+</table>
+</div>
+<span class="greska">{{porukaFakture}}</span>
+</div>

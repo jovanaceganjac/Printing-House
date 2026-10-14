@@ -1,0 +1,38 @@
+<h2>Detalji proizvoda</h2>
+<hr>
+
+<h3>{{proizvod.naziv}}</h3>
+<p>Štamparija: {{proizvod.naziv_stamparije}}</p>
+<p>Grad: {{proizvod.grad}}</p>
+<p>Sviđanja: {{proizvod.broj_svidjanja}} &nbsp; Nesviđanja: {{proizvod.broj_nesvidjanja}}</p>
+
+<hr>
+
+<div class="galerija">
+    @if (glavnaSlika != "") {
+        <img class="glavna" [src]="api + glavnaSlika" [alt]="proizvod.naziv">
+    }
+    @else {
+        <p class="pomocni">Štamparija još nije dodala sliku ovog proizvoda.</p>
+    }
+    <div class="male">
+        @for (s of sveSlike(); track s) {
+            <img class="mala" [class.izabrana]="s == glavnaSlika" [src]="api + s" [alt]="proizvod.naziv" (click)="postaviGlavnu(s)">
+        }
+    </div>
+</div>
+
+<hr>
+
+<h3>KOMENTARI</h3>
+@if (poslednjiKomentari().length == 0) {
+    <p>Nema komentara za ovaj proizvod.</p>
+}
+@else {
+    @for (k of poslednjiKomentari(); track k.id_komentara) {
+        <p>{{k.kor_ime}} ({{formatDatum(k.datum)}}): {{k.tekst}}</p>
+    }
+}
+
+<hr>
+<button class="dugme-sporedno" (click)="nazad()">NAZAD</button>

@@ -1,0 +1,18 @@
+<h2>Zaboravljena lozinka</h2>
+<hr>
+
+<div class="okvir">
+    Korisničko ime ili e-mail: <input type="text" name="kor_ime_ili_email" [(ngModel)]="kor_ime_ili_email" (keyup.enter)="posalji()"><br>
+    <span class="greska">{{porukaGreske}}</span><br>
+    <button (click)="posalji()">Pošalji zahtev</button>
+
+    <div><span class="uspeh">{{porukaUspeha}}</span></div>
+    @if (link != "") {
+        <div><a [routerLink]="link">Postavi novu lozinku</a></div>
+    }
+
+    <br><br>
+    <a routerLink="">Nazad na prijavu</a>
+</div>
+
+<hr>

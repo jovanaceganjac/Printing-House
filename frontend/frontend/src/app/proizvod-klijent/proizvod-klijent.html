@@ -1,0 +1,88 @@
+<h2>Detalji proizvoda</h2>
+<hr>
+
+<h3>{{proizvod.naziv}}</h3>
+<p>Štamparija: {{proizvod.naziv_stamparije}}</p>
+<p>Grad: {{proizvod.grad}}@if (adresaStamparije != "") {, {{adresaStamparije}}}</p>
+
+@if (mapa != null) {
+    <iframe class="mapa" [src]="mapa" title="Lokacija štamparije"></iframe>
+}
+
+<p>
+    <span class="oznaka oznaka-svidjanja">Sviđanja: {{proizvod.broj_svidjanja}}</span>
+    <span class="oznaka oznaka-nesvidjanja">Nesviđanja: {{proizvod.broj_nesvidjanja}}</span>
+</p>
+<p>Cena po komadu: {{proizvod.jedinicna_cena}} din</p>
+<p>Na lageru: {{proizvod.kolicina_na_lageru}}</p>
+<p class="opis">Opis: {{proizvod.opis}}</p>
+
+<hr>
+
+<div class="galerija">
+    @if (glavnaSlika != "") {
+        <img class="glavna" [src]="api + glavnaSlika" [alt]="proizvod.naziv">
+    }
+    @else {
+        <p class="pomocni">Štamparija još nije dodala sliku ovog proizvoda.</p>
+    }
+    <div class="male">
+        @for (s of sveSlike(); track s) {
+            <img class="mala" [class.izabrana]="s == glavnaSlika" [src]="api + s" [alt]="proizvod.naziv" (click)="postaviGlavnu(s)">
+        }
+    </div>
+</div>
+
+<hr>
+
+<div>
+    Boja:
+    <select name="izabranaBoja" [(ngModel)]="izabranaBoja">
+        @for (b of boje; track b) {
+            <option [value]="b">{{b}}</option>
+        }
+    </select>
+</div>
+
+<hr>
+
+<h3>VRSTE ŠTAMPE</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>Tip štampe</th>
+        <th>Maksimalne dimenzije</th>
+        <th>Dodatna cena po komadu</th>
+    </tr>
+    @if (proizvod.usluge_stampe.length == 0) {
+        <tr>
+            <td colspan="3" class="prazno">Štamparija nije definisala vrste štampe za ovaj proizvod.</td>
+        </tr>
+    }
+    @for (u of proizvod.usluge_stampe; track u.id_usluge) {
+        <tr>
+            <td>{{u.tip_stampe}}</td>
+            <td>{{u.max_sirina_mm}} x {{u.max_visina_mm}} mm</td>
+            <td class="broj">{{u.dodatna_cena_po_komadu}} din</td>
+        </tr>
+    }
+</table>
+</div>
+
+<hr>
+
+<h3>KOMENTARI</h3>
+@if (poslednjiKomentari().length == 0) {
+    <p>Nema komentara za ovaj proizvod.</p>
+}
+@else {
+    @for (k of poslednjiKomentari(); track k.id_komentara) {
+        <p [class.moj-komentar]="k.kor_ime == kor_ime"><b>{{k.kor_ime}}</b> ({{formatDatum(k.datum)}}): {{k.tekst}}</p>
+    }
+}
+
+<hr>
+<div>
+    <button (click)="dalje()" [disabled]="proizvod.kolicina_na_lageru == 0 || proizvod.usluge_stampe.length == 0">DALJE</button>
+    <button class="dugme-sporedno" (click)="nazad()">NAZAD</button>
+</div>

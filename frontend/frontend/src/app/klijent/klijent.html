@@ -1,0 +1,104 @@
+<h2>Moj profil</h2>
+<div class="sidra">
+    <a routerLink="/klijent" class="aktivan">Moj Profil</a>
+    <a routerLink="/narudzbine">Moje Narudžbine</a>
+    <a routerLink="/pretraga">Pretraga Proizvoda</a>
+    <a routerLink="/korpa">E-Korpa</a>
+    <a routerLink="/arhiva">Arhiva Proizvoda</a>
+    @if (tip == "klijent_pravno") {
+        <a routerLink="/javne-nabavke">Javne Nabavke</a>
+    }
+</div>
+
+<p>Prijavljen korisnik: {{korisnik.ime}} {{korisnik.prezime}} ({{korisnik.kor_ime}})</p>
+
+<div class="okvir" id="moj-profil">
+<h3>MOJ PROFIL</h3>
+
+@if (izmena) {
+    <div class="tabela-okvir">
+<table>
+        <tr>
+            <td>Korisničko ime</td>
+            <td><input type="text" [value]="izmenaKorisnik.kor_ime" [disabled]="true"></td>
+        </tr>
+        <tr>
+            <td>{{izmenaKorisnik.tip == "klijent_pravno" ? "Ime odgovornog lica" : "Ime"}}</td>
+            <td><input type="text" name="ime" [(ngModel)]="izmenaKorisnik.ime"></td>
+        </tr>
+        <tr>
+            <td>{{izmenaKorisnik.tip == "klijent_pravno" ? "Prezime odgovornog lica" : "Prezime"}}</td>
+            <td><input type="text" name="prezime" [(ngModel)]="izmenaKorisnik.prezime"></td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td><input type="text" name="telefon" [(ngModel)]="izmenaKorisnik.telefon"></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input type="text" name="email" [(ngModel)]="izmenaKorisnik.email"></td>
+        </tr>
+        @if (izmenaKorisnik.tip == "klijent_pravno") {
+            <tr>
+                <td>Naziv institucije</td>
+                <td><input type="text" name="naziv_institucije" [(ngModel)]="izmenaKorisnik.naziv_institucije"></td>
+            </tr>
+            <tr>
+                <td>Adresa sedišta</td>
+                <td><input type="text" name="adresa_sedista" [(ngModel)]="izmenaKorisnik.adresa_sedista"></td>
+            </tr>
+            <tr>
+                <td>Grad</td>
+                <td><input type="text" name="grad" [(ngModel)]="izmenaKorisnik.grad"></td>
+            </tr>
+            <tr>
+                <td>Matični broj</td>
+                <td><input type="text" [value]="izmenaKorisnik.maticni_broj" [disabled]="true"></td>
+            </tr>
+            <tr>
+                <td>PIB</td>
+                <td><input type="text" [value]="izmenaKorisnik.pib" [disabled]="true"></td>
+            </tr>
+        }
+        <tr>
+            <td>Nova lozinka</td>
+            <td><input type="password" name="novaLozinka" [(ngModel)]="novaLozinka"> (prazno = ne menjaj)</td>
+        </tr>
+        <tr>
+            <td>Profilna slika</td>
+            <td><input type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiProfilnu($event)"> (od 100x100 do 250x250)</td>
+        </tr>
+    </table>
+</div>
+    <span class="greska">{{porukaProfil}}</span><br>
+    <button (click)="sacuvajProfil()">Sačuvaj</button>
+    <button class="dugme-sporedno" (click)="otkaziIzmenu()">Odustani</button>
+}
+@else {
+    <div class="tabela-okvir">
+<table>
+        <tr><td>Korisničko ime</td><td>{{korisnik.kor_ime}}</td></tr>
+        <tr><td>{{korisnik.tip == "klijent_pravno" ? "Odgovorno lice" : "Ime i prezime"}}</td><td>{{korisnik.ime}} {{korisnik.prezime}}</td></tr>
+        <tr><td>Telefon</td><td>{{korisnik.telefon}}</td></tr>
+        <tr><td>E-mail</td><td>{{korisnik.email}}</td></tr>
+        @if (korisnik.tip == "klijent_pravno") {
+            <tr><td>Naziv institucije</td><td>{{korisnik.naziv_institucije}}</td></tr>
+            <tr><td>Adresa sedišta</td><td>{{korisnik.adresa_sedista}}</td></tr>
+            <tr><td>Grad</td><td>{{korisnik.grad}}</td></tr>
+            <tr><td>Matični broj</td><td>{{korisnik.maticni_broj}}</td></tr>
+            <tr><td>PIB</td><td>{{korisnik.pib}}</td></tr>
+        }
+        <tr>
+            <td>Profilna slika</td>
+            <td>
+                @if (korisnik.slika != "") {
+                    <img class="profilna" [src]="api + korisnik.slika" [alt]="korisnik.kor_ime">
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+    <span class="uspeh">{{porukaProfilUspeh}}</span><br>
+    <button (click)="pocniIzmenu()">Izmeni</button>
+}
+</div>

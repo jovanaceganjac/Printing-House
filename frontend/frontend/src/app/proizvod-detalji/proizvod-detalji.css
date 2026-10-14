@@ -1,0 +1,54 @@
+:host {
+    display: grid;
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+    column-gap: var(--r5);
+    align-items: start;
+}
+
+:host > * {
+    grid-column: 2;
+}
+
+:host > hr {
+    display: none;
+}
+
+.galerija {
+    grid-column: 1;
+    grid-row: 1 / span 20;
+}
+
+.glavna {
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    background-color: var(--papir);
+    border: 1px solid var(--ivica);
+    border-radius: var(--rad);
+    padding: var(--r2);
+}
+
+.male {
+    margin-top: var(--r2);
+}
+
+.mala {
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+}
+
+.mala.izabrana {
+    border: 2px solid var(--cijan);
+}
+
+@media (max-width: 900px) {
+    :host {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    :host > *, .galerija {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}

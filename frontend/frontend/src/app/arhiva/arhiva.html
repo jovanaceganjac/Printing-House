@@ -1,0 +1,76 @@
+<h2>Arhiva proizvoda</h2>
+<div class="sidra">
+    <a routerLink="/klijent">Moj Profil</a>
+    <a routerLink="/narudzbine">Moje Narudžbine</a>
+    <a routerLink="/pretraga">Pretraga Proizvoda</a>
+    <a routerLink="/korpa">E-Korpa</a>
+    <a routerLink="/arhiva" class="aktivan">Arhiva Proizvoda</a>
+    @if (tip == "klijent_pravno") {
+        <a routerLink="/javne-nabavke">Javne Nabavke</a>
+    }
+</div>
+
+<div class="okvir" id="arhiva-proizvoda">
+<h3>ARHIVA PROIZVODA</h3>
+<p class="pomocni">Isporučeni i primljeni proizvodi, podrazumevano sortirani po datumu naručivanja. Klik na zaglavlje kolone menja sortiranje.</p>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th class="sortiranje" (click)="sortirajArhivu('naziv')">
+            Proizvod
+            @if (sortiranoArhiva == "naziv") {
+                @if (rastuceArhiva) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortirajArhivu('stamparija')">
+            Štamparija
+            @if (sortiranoArhiva == "stamparija") {
+                @if (rastuceArhiva) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortirajArhivu('kolicina')">
+            Količina
+            @if (sortiranoArhiva == "kolicina") {
+                @if (rastuceArhiva) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th class="sortiranje" (click)="sortirajArhivu('datum')">
+            Datum naručivanja
+            @if (sortiranoArhiva == "datum") {
+                @if (rastuceArhiva) { <span>&#9650;</span> } @else { <span>&#9660;</span> }
+            }
+        </th>
+        <th>Status</th>
+        <th>Akcije</th>
+    </tr>
+    @if (arhiva.length == 0) {
+        <tr>
+            <td colspan="6" class="prazno">Nema isporučenih ni primljenih proizvoda.</td>
+        </tr>
+    }
+    @for (red of arhiva; track kljuc(red)) {
+        <tr>
+            <td><a (click)="detalji(red)" class="link">{{red.naziv}}</a></td>
+            <td>{{red.naziv_stamparije}}</td>
+            <td class="broj">{{red.kolicina}}</td>
+            <td>{{formatDatum(red.datum)}}</td>
+            <td><span class="oznaka oznaka-{{red.status}}">{{nazivStatusa(red.status)}}</span></td>
+            <td>
+                @if (red.status == "isporuceno") {
+                    <button (click)="primljenoIzArhive(red)">Primljeno</button>
+                }
+                @if (red.status == "primljeno") {
+                    <button [class.dugme-sporedno]="red.moja_ocena != 1" (click)="oceni(red, 1)">Sviđa mi se</button>
+                    <button [class.dugme-sporedno]="red.moja_ocena != -1" (click)="oceni(red, -1)">Ne sviđa mi se</button>
+                    <br>
+                    <input type="text" class="komentar" placeholder="Komentar" [name]="'komentar_' + kljuc(red)" [(ngModel)]="noviKomentari[kljuc(red)]">
+                    <button (click)="posaljiKomentar(red)">Pošalji komentar</button>
+                }
+            </td>
+        </tr>
+    }
+</table>
+</div>
+<span class="greska">{{porukaArhiva}}</span>
+<span class="uspeh">{{porukaArhivaUspeh}}</span>
+</div>

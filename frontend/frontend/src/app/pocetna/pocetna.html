@@ -1,0 +1,109 @@
+<h2>Printing House</h2>
+<hr>
+
+<div class="junak">
+    <p class="junak-red">Broj registrovanih štamparija: <span class="junak-broj">{{brojStamparija}}</span></p>
+    <div class="traka-boja"><span></span><span></span><span></span><span></span></div>
+</div>
+
+<h3>TOP 5 PROIZVODA</h3>
+<div class="tabela-okvir">
+<table>
+    <tr>
+        <th>Naziv</th>
+        <th>Štamparija</th>
+        <th>Grad</th>
+        <th>Broj sviđanja</th>
+        <th></th>
+    </tr>
+    @for (p of top5; track p.sifra) {
+        <tr>
+            <td>{{p.naziv}}</td>
+            <td>{{p.naziv_stamparije}}</td>
+            <td>{{p.grad}}</td>
+            <td class="broj">{{p.broj_svidjanja}}</td>
+            <td><button (click)="detalji(p)">DETALJI</button></td>
+        </tr>
+    }
+</table>
+</div>
+
+<hr>
+
+<h3>PRETRAGA</h3>
+<div class="forma-pretrage">
+    <label class="polje-pretrage">Naziv proizvoda: <input type="text" name="naziv" [(ngModel)]="naziv" (keyup.enter)="pretrazi()"></label>
+    <label class="polje-pretrage">Kategorija:
+        <select name="kategorija" [(ngModel)]="kategorija">
+            <option value="Sve kategorije">Sve kategorije</option>
+            @for (k of kategorije; track k) {
+                <option [value]="k">{{k}}</option>
+            }
+        </select>
+    </label>
+    <button (click)="pretrazi()">Pretraži</button>
+</div>
+
+@if (pretragaIzvrsena) {
+    @if (rezultati.length == 0) {
+        <p>Nema rezultata. Promenite uslove pretrage.</p>
+    }
+    @else {
+        <div class="tabela-okvir">
+<table>
+            <tr>
+                <th class="sortiranje" (click)="sortirajPoNazivu()">
+                    Naziv
+                    @if (sortirano) {
+                        @if (rastuce) {
+                            <span>&#9650;</span>
+                        }
+                        @else {
+                            <span>&#9660;</span>
+                        }
+                    }
+                </th>
+                <th>Kategorija</th>
+                <th>Potkategorija</th>
+                <th>Štamparija</th>
+                <th>Grad</th>
+                <th>Cena</th>
+                <th></th>
+            </tr>
+            @for (p of rezultati; track p.sifra) {
+                <tr>
+                    <td>{{p.naziv}}</td>
+                    <td>{{p.kategorija}}</td>
+                    <td>{{p.potkategorija}}</td>
+                    <td>{{p.naziv_stamparije}}</td>
+                    <td>{{p.grad}}</td>
+                    <td class="broj">{{p.jedinicna_cena}} din</td>
+                    <td><button (click)="detalji(p)">DETALJI</button></td>
+                </tr>
+            }
+        </table>
+</div>
+    }
+}
+
+<hr>
+
+<div class="okvir panel-prijave">
+    @if (prijavljen() != null) {
+        <h3>Dobrodošli</h3>
+        <p>Prijavljeni ste kao {{prijavljen().ime}} {{prijavljen().prezime}} ({{prijavljen().kor_ime}}).</p>
+        <button (click)="mojaStrana()">Moja strana</button>
+    }
+    @else {
+        <h3>Prijava</h3>
+        Korisničko ime: <input type="text" name="kor_ime" [(ngModel)]="kor_ime" (keyup.enter)="prijava()"><br>
+        Lozinka: <input type="password" name="lozinka" [(ngModel)]="lozinka" (keyup.enter)="prijava()"><br>
+        <span class="greska">{{porukaGreske}}</span><br>
+        <button (click)="prijava()">Prijavi se</button>
+        <br><br>
+        <a routerLink="/zaboravljena-lozinka">Zaboravljena lozinka</a><br>
+        <a routerLink="/registracija">Registruj se</a>
+    }
+</div>
+
+<hr>

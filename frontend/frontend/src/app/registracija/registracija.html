@@ -1,0 +1,40 @@
+<h2>Registracija</h2>
+<hr>
+
+<div class="okvir">
+    Tip korisnika:
+    <select name="tip" [(ngModel)]="korisnik.tip">
+        <option value="">-- izaberite --</option>
+        <option value="klijent_fizicko">Fizičko lice</option>
+        <option value="klijent_pravno">Pravno lice</option>
+        <option value="stampar">Štamparija</option>
+    </select><br>
+
+    Korisničko ime: <input type="text" name="kor_ime" [(ngModel)]="korisnik.kor_ime"><br>
+    Lozinka: <input type="password" name="lozinka" [(ngModel)]="korisnik.lozinka"><br>
+    Potvrda lozinke: <input type="password" name="potvrdaLozinke" [(ngModel)]="potvrdaLozinke"><br>
+    {{korisnik.tip == "klijent_pravno" || korisnik.tip == "stampar" ? "Ime odgovornog lica" : "Ime"}}: <input type="text" name="ime" [(ngModel)]="korisnik.ime"><br>
+    {{korisnik.tip == "klijent_pravno" || korisnik.tip == "stampar" ? "Prezime odgovornog lica" : "Prezime"}}: <input type="text" name="prezime" [(ngModel)]="korisnik.prezime"><br>
+    Kontakt telefon: <input type="text" name="telefon" [(ngModel)]="korisnik.telefon"><br>
+    E-mail: <input type="text" name="email" [(ngModel)]="korisnik.email"><br>
+
+    @if (korisnik.tip == "klijent_pravno" || korisnik.tip == "stampar") {
+        <hr>
+        Naziv institucije: <input type="text" name="naziv_institucije" [(ngModel)]="korisnik.naziv_institucije"><br>
+        Adresa sedišta: <input type="text" name="adresa_sedista" [(ngModel)]="korisnik.adresa_sedista"><br>
+        Matični broj: <input type="text" name="maticni_broj" [(ngModel)]="korisnik.maticni_broj"><br>
+        PIB: <input type="text" name="pib" [(ngModel)]="korisnik.pib"><br>
+        Grad: <input type="text" name="grad" [(ngModel)]="korisnik.grad"><br>
+        <hr>
+    }
+
+    Profilna slika (JPG/PNG/GIF, od 100x100 do 250x250 px): <input type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiSliku($event)"><br>
+
+    <span class="greska">{{porukaGreske}}</span><br>
+    <span class="uspeh">{{porukaUspeha}}</span><br>
+    <button (click)="registruj()">Registruj se</button>
+    <br><br>
+    <a routerLink="">Nazad na prijavu</a>
+</div>
+
+<hr>

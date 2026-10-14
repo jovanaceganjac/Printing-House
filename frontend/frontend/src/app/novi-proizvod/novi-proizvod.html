@@ -1,0 +1,76 @@
+<h2>Štampar — {{korisnik.naziv_institucije}}</h2>
+<div class="sidra">
+    <a routerLink="/stampar">Moj Profil</a>
+    <a routerLink="/moji-proizvodi">Moji Proizvodi</a>
+    <a routerLink="/naruceni-proizvodi">Naručeni Proizvodi</a>
+    <a routerLink="/licitacije">Licitacije</a>
+    <a routerLink="/dodavanje-iz-fajla">Dodavanje Iz Fajla</a>
+    <a routerLink="/novi-proizvod" class="aktivan">Novi Proizvod</a>
+</div>
+
+<div class="okvir" id="novi-proizvod">
+<h3>NOVI PROIZVOD</h3>
+<div class="okvir">
+    Naziv: <input type="text" name="noviNaziv" [(ngModel)]="noviNaziv"><br>
+    Opis: <input type="text" class="siroko" name="noviOpis" [(ngModel)]="noviOpis"><br>
+    Kategorija:
+    <select name="novaKategorija" [(ngModel)]="novaKategorija" (change)="promeniKategoriju()">
+        <option value="">-- izaberite --</option>
+        @for (k of kategorije; track k.naziv) {
+            <option [value]="k.naziv">{{k.naziv}}</option>
+        }
+    </select><br>
+    Potkategorija:
+    <select name="novaPotkategorija" [(ngModel)]="novaPotkategorija">
+        <option value="">-- izaberite --</option>
+        @for (pk of potkategorije; track pk) {
+            <option [value]="pk">{{pk}}</option>
+        }
+    </select><br>
+    Jedinična cena: <input type="number" name="novaCena" [(ngModel)]="novaCena"><br>
+    Količina na lageru: <input type="number" name="novaKolicina" [(ngModel)]="novaKolicina"><br>
+    Dostupne boje (odvojene zarezom): <input type="text" class="siroko" name="noveBoje" [(ngModel)]="noveBoje"><br>
+
+    <hr>
+    Glavna slika: <input type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiGlavnuSliku($event)">
+    @if (glavnaSlikaPutanja != "") {
+        <img class="mala" [src]="api + glavnaSlikaPutanja" alt="glavna slika">
+    }
+    <br>
+    Dodatna slika (najviše 3): <input type="file" accept=".jpg,.jpeg,.png,.gif" (change)="izaberiDodatnuSliku($event)"><br>
+    @for (s of dodatneSlikePutanje; track s) {
+        <img class="mala" [src]="api + s" alt="dodatna slika">
+        <button class="dugme-opasno" (click)="ukloniDodatnu($index)">Ukloni</button>
+    }
+
+    <hr>
+    USLUGE ŠTAMPE
+    <div class="tabela-okvir">
+<table>
+        <tr>
+            <th>Tip štampe</th>
+            <th>Dodatna cena po komadu</th>
+            <th>Max širina (mm)</th>
+            <th>Max visina (mm)</th>
+            <th></th>
+        </tr>
+        @for (u of usluge; track $index) {
+            <tr>
+                <td><input type="text" [name]="'tip_' + $index" [(ngModel)]="u.tip_stampe"></td>
+                <td><input type="number" [name]="'cena_' + $index" [(ngModel)]="u.dodatna_cena_po_komadu"></td>
+                <td><input type="number" [name]="'sirina_' + $index" [(ngModel)]="u.max_sirina_mm"></td>
+                <td><input type="number" [name]="'visina_' + $index" [(ngModel)]="u.max_visina_mm"></td>
+                <td><button class="dugme-opasno" (click)="ukloniUslugu($index)">Ukloni</button></td>
+            </tr>
+        }
+    </table>
+</div>
+    <button (click)="dodajUslugu()">Dodaj uslugu</button>
+
+    <hr>
+    <span class="greska">{{porukaGreske}}</span><br>
+    <span class="uspeh">{{porukaUspeha}}</span><br>
+    <button (click)="dodajProizvod()">Dodaj proizvod</button>
+</div>
+</div>
+

@@ -1,0 +1,54 @@
+<h2>Štampar — {{korisnik.naziv_institucije}}</h2>
+<div class="sidra">
+    <a routerLink="/stampar">Moj Profil</a>
+    <a routerLink="/moji-proizvodi">Moji Proizvodi</a>
+    <a routerLink="/naruceni-proizvodi">Naručeni Proizvodi</a>
+    <a routerLink="/licitacije">Licitacije</a>
+    <a routerLink="/dodavanje-iz-fajla" class="aktivan">Dodavanje Iz Fajla</a>
+    <a routerLink="/novi-proizvod">Novi Proizvod</a>
+</div>
+
+<div class="okvir" id="dodavanje-iz-fajla">
+<h3>DODAVANJE IZ FAJLA</h3>
+<div class="okvir">
+    JSON fajl sa lager listom: <input type="file" accept=".json" (change)="izaberiFajl($event)">
+
+    @if (zaUvoz.length > 0) {
+        <div class="tabela-okvir">
+<table>
+            <tr>
+                <th>Naziv</th>
+                <th>Kategorija</th>
+                <th>Potkategorija</th>
+                <th>Cena</th>
+                <th>Količina</th>
+                <th>Usluga</th>
+            </tr>
+            @for (u of zaUvoz; track $index) {
+                <tr>
+                    <td>{{u.naziv}}</td>
+                    <td>{{u.kategorija}}</td>
+                    <td>{{u.potkategorija}}</td>
+                    <td class="broj">{{u.jedinicnaCena}} din</td>
+                    <td class="broj">{{u.kolicinaNaLageru}}</td>
+                    <td class="broj">{{brojUsluga(u)}}</td>
+                </tr>
+            }
+        </table>
+</div>
+        <button (click)="posaljiUvoz()">Pošalji</button>
+    }
+
+    <br>
+    <span class="greska">{{porukaUvoz}}</span><br>
+    <span class="uspeh">{{porukaUvozUspeh}}</span>
+    @if (preskoceni.length > 0) {
+        <p>Preskočeni proizvodi:</p>
+        <ul>
+            @for (p of preskoceni; track $index) {
+                <li>{{p.naziv}}: {{p.razlog}}</li>
+            }
+        </ul>
+    }
+</div>
+</div>
